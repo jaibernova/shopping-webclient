@@ -30,7 +30,7 @@
             </h5>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Compra ahora</b-button>
+            <b-button class="addToCart" @click="shop(product)">Agregar al carrito</b-button>
             <!-- </router-link> -->
           </b-col>
         </b-col>
@@ -61,7 +61,7 @@
             </p>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Compra ahora</b-button>
+            <b-button class="addToCart" @click="shop(product)">Agregar al carrito</b-button>
           </div>
         </div>
       </div>

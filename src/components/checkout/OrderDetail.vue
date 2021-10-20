@@ -22,7 +22,7 @@
                   >{{custom | customDisplay}} |</span>
                 </div>
               </div>
-              <span class="delete" @click="deleteSelected(item)">Delete</span>
+              <span class="delete" @click="deleteSelected(item)">Borrar</span>
             </b-col>
             <b-col class="align-right">
               <b-form-select
@@ -45,7 +45,7 @@
       <b-row>
         <!-- <hr> -->
         <b-col cols="8" class="align-right">
-          <strong>Total Weight</strong>
+          <strong>Peso total</strong>
         </b-col>
         <b-col
           class="align-right"
@@ -57,37 +57,37 @@
         <b-col cols="8" class="align-right">
           <strong>Sub Total</strong>
         </b-col>
-        <b-col class="align-right">{{subtotal.currency}} {{parseFloat(subtotal.amount).toFixed(2)}}</b-col>
+        <b-col class="align-right">$ {{parseFloat(subtotal.amount).toFixed(2)}}</b-col>
       </b-row>
 
       <b-row v-if="serviceCharge">
         <!-- <hr> -->
         <b-col cols="8" class="align-right">
-          <strong>Service Charge</strong>
+          <strong>Cargos por servicio</strong>
         </b-col>
         <b-col
           class="align-right"
-        >{{serviceCharge.currency}} {{parseFloat(serviceCharge.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(serviceCharge.amount).toFixed(2)}}</b-col>
       </b-row>
 
       <b-row v-if="shippingPrice">
         <!-- <hr> -->
         <b-col cols="8" class="align-right">
-          <strong>Shipping Charge</strong>
+          <strong>Costo de envio</strong>
         </b-col>
         <b-col
           class="align-right"
-        >{{shippingPrice.currency}} {{parseFloat(shippingPrice.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(shippingPrice.amount).toFixed(2)}}</b-col>
       </b-row>
 
       <b-row v-if="tariffPrice">
         <!-- <hr> -->
         <b-col cols="8" class="align-right">
-          <strong>Tariff Charge</strong>
+          <strong>Tarifa</strong>
         </b-col>
         <b-col
           class="align-right"
-        >{{tariffPrice.currency}} {{parseFloat(tariffPrice.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(tariffPrice.amount).toFixed(2)}}</b-col>
       </b-row>
 
       <br>
@@ -104,10 +104,10 @@
 
     <div v-if="orders && orders.length <= 0" class="order-empty">
       <div class="content">
-        <div>You have not ordered yet.
+        <div>No has ordenado aun.
           <br>
           <br>
-          <b-button @click="gotoDealPage()" class="primary-button">Go Get Orderin</b-button>
+          <b-button @click="gotoDealPage()" class="primary-button">Llevame a la pagina de pagos</b-button>
         </div>
       </div>
     </div>

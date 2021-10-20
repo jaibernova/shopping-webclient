@@ -66,11 +66,11 @@
           <strong>Sub Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>{{subtotal.currency}} {{parseFloat(subtotal.amount).toFixed(2)}}</strong>
+          <strong>$ {{parseFloat(subtotal.amount).toFixed(2)}}</strong>
         </b-col>
       </b-row>
       <br>
-      <p class="info align-center">Final cost will be calculated during checkout.</p>
+      <p class="info align-center">El costo final sera calculado al estar terminando la compra.</p>
       <b-btn class="addToCart" @click="gotoCheckout()">Checkout</b-btn>
     </div>
   </div>

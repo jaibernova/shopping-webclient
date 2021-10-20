@@ -18,8 +18,8 @@
             </b-col>
             <b-col>
               <div class="align-right">
-                <a @click="editClicked(add)">Edit</a> &nbsp;&nbsp;&nbsp;
-                <a @click="deleteClicked(add)">Delete</a>
+                <a @click="editClicked(add)">Editar</a> &nbsp;&nbsp;&nbsp;
+                <a @click="deleteClicked(add)">Borrar</a>
               </div>
             </b-col>
           </b-row>
@@ -28,7 +28,7 @@
     </div>
     <div v-else-if="allAddresses.length <= 0 && !isShowAddAddress">
       <div class="empty-info">
-        <p>Nothing to display</p>
+        <p>Nada que mostrar</p>
       </div>
     </div>
 
@@ -49,7 +49,7 @@
         <b-row>
           <b-col md="6">
             <b-form-group>
-              <label for="firstName">First Name:</label>
+              <label for="firstName">Primer nombre:</label>
               <b-form-input
                 id="firstName"
                 type="text"
@@ -57,32 +57,32 @@
                 size="sm"
                 :state="firstNameState"
                 v-model="shippingDeet.firstName"
-                placeholder="Enter your first name"
+                placeholder="Ingresa tu nombre"
                 aria-describedby="firstNameFeedback"
               ></b-form-input>
               <b-form-invalid-feedback id>
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                First name cannot be empty
+                Este campo no puede quedar vacio.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
           <b-col md="6">
             <b-form-group>
-              <label for="lastName">Last Name:</label>
+              <label for="lastName">Apellido:</label>
               <b-form-input
                 id="lastName"
                 size="sm"
                 type="text"
                 name="lastName"
                 v-model="shippingDeet.lastName"
-                placeholder="Enter your last name"
+                placeholder="Ingresa tu apellido"
               ></b-form-input>
             </b-form-group>
           </b-col>
         </b-row>
 
         <b-form-group>
-          <label for="address1">Address 1:</label>
+          <label for="address1">Direccion 1:</label>
           <b-form-input
             id="address1"
             type="text"
@@ -90,31 +90,31 @@
             name="text"
             :state="address1State"
             v-model="shippingDeet.addressLine1"
-            placeholder="Enter your address"
+            placeholder="Ingresa tu direccion"
             aria-describedby="address1State"
           ></b-form-input>
           <b-form-invalid-feedback id="address1State">
             <!-- This will only be shown if the preceeding input has an invalid state -->
-            Please enter your address before continuing
+            Porfavor ingresa tu direccion antes de continuar.
           </b-form-invalid-feedback>
         </b-form-group>
 
         <b-form-group>
-          <label for="address2">Address 2:</label>
+          <label for="address2">Direccion 2:</label>
           <b-form-input
             id="address2"
             type="text"
             name="address2"
             size="sm"
             v-model="shippingDeet.addressLine2"
-            placeholder="Enter your address 2"
+            placeholder="Ingresa otra direccion alternativa"
           ></b-form-input>
         </b-form-group>
 
         <b-row>
           <b-col>
             <b-form-group>
-              <label for="city">City:</label>
+              <label for="city">Ciudad:</label>
               <b-form-input
                 id="city"
                 type="text"
@@ -122,18 +122,18 @@
                 :state="cityState"
                 size="sm"
                 v-model="shippingDeet.city"
-                placeholder="Enter your city"
+                placeholder="Ingresa tu ciudad"
                 aria-describedby="cityStatee"
               ></b-form-input>
               <b-form-invalid-feedback id="cityStatee">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                Please enter your city before continuing
+                Porfavor ingresa la ciudad antes de continuar.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
           <b-col>
             <b-form-group>
-              <label for="phone">Phone:</label>
+              <label for="phone">Celular:</label>
               <b-form-input
                 id="phone"
                 type="number"
@@ -141,12 +141,12 @@
                 :state="phoneState"
                 size="sm"
                 v-model="shippingDeet.mobilePhone"
-                placeholder="Enter your phone number"
+                placeholder="Ingresa tu celular"
                 aria-describedby="phoneStatee"
               ></b-form-input>
               <b-form-invalid-feedback id="phoneStatee">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                Please enter your city before continuing
+                porfavor ingresa un celular antes de continuar.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
@@ -155,7 +155,7 @@
         <b-row>
           <b-col>
             <b-form-group>
-              <label for="state">State:</label>
+              <label for="state">Localidad:</label>
               <b-form-input
                 id="state"
                 type="text"
@@ -163,18 +163,18 @@
                 size="sm"
                 :state="stateState"
                 v-model="shippingDeet.state"
-                placeholder="Your State"
+                placeholder="Ingresa tu localidad"
                 aria-describedby="stateFeedback"
               ></b-form-input>
               <b-form-invalid-feedback id="stateFeedback">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                Please enter your state.
+                POrfavor ingresa la localidad.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
           <b-col>
             <b-form-group>
-              <label for="zip">Zip Code:</label>
+              <label for="zip">Codigo ZIP:</label>
               <b-form-input
                 id="zip"
                 type="number"
@@ -182,18 +182,18 @@
                 size="sm"
                 :state="zipState"
                 v-model="shippingDeet.zipCode"
-                placeholder="Enter your Zip Code."
+                placeholder="Si no lo sabes, ingresa 111111."
                 aria-describedby="zipFeedback"
               ></b-form-input>
               <b-form-invalid-feedback id="zipFeedback">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                Your Zip Code cannot be empty.
+                Codigo ZIP no puede quedar vacio, si no lo sabes ingresa 111111.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
           <b-col>
             <b-form-group>
-              <label for="country">Country</label>
+              <label for="country">Pais</label>
               <b-form-select
                 v-model="shippingDeet.country"
                 :options="countryOptions"
@@ -204,15 +204,15 @@
               />
               <b-form-invalid-feedback id="countryFeedback">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
-                The country cannot be empty.
+                El pais no puede quedar vacio.
               </b-form-invalid-feedback>
             </b-form-group>
           </b-col>
         </b-row>
         <div class="action-buttons">
-          <b-button variant="secondary-button" class="cancel-btn" @click="cancelForm()">Cancel</b-button>
-          <b-button class="primary-button" v-if="!isUpdate" @click="saveAddress()">Save</b-button>
-          <b-button class="primary-button" v-else @click="saveAddress()">Edit</b-button>
+          <b-button variant="secondary-button" class="cancel-btn" @click="cancelForm()">Cancelar</b-button>
+          <b-button class="primary-button" v-if="!isUpdate" @click="saveAddress()">Guardar</b-button>
+          <b-button class="primary-button" v-else @click="saveAddress()">Editar</b-button>
         </div>
       </div>
     </transition>

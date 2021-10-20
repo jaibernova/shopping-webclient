@@ -2,7 +2,7 @@
   <div id="order-view" class="align-left">
     <div class="space"></div>
     &nbsp;
-    <h2>Your orders</h2>
+    <h2>Tus pedidos</h2>
 
     <b-tabs>
       <template slot="tabs">
@@ -21,7 +21,7 @@
       </div>
 
       <div v-if="filteredOrders.length <= 0" class="empty-info">
-        <p>No orders are in this status.</p>
+        <p>No hay pedidos, realiza uno :).</p>
       </div>
     </div>
   </div>

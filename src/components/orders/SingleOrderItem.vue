@@ -49,10 +49,10 @@
         </b-col>
         <b-col md="3">
           <div class="info">
-            Due to the unconventional shipping methods, we cannot process direct returns on international orders.
-            If there is any severe damage to the product, then please contact us. <br> <br>
+            Si tiene algun inconveniente con la compra, porfavor contactenos al Whatsapp.
+            <br> <br>
 
-            <a href="mailto:support@veniqa.com">support@veniqa.com</a>
+            <a href="mailto:jdnovar@unal.edu.co">jdnovar@unal.edu.co</a>
           </div>
         </b-col>
       </b-row>
