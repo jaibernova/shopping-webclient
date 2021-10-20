@@ -35,17 +35,17 @@
             size="lg"
             class="full-width primary-button"
             @click="handleCheckout()"
-          >Get Final Prices</b-button>
+          >Obtener el precio final</b-button>
           <br />
           <br />
         </div>
         <div v-else-if="!emailConfirmed">
-          <p>You cannot checkout currently because your email address has not been confirmed.
-            Please click below to resend the confirmation email</p>
+          <p>Por favor confirma tu correo antes de realizar el pago.
+            Porfavor presiona el boton inferior para reenviar el correo de confirmacion</p>
           <b-button
             class="primary-button"
             @click="resendEmailConfirmation()"
-          >Resend Email Confirmation</b-button>
+          >Reenviar correo de confirmacion</b-button>
         </div>
 
         <div v-if="checkoutInitiated">
@@ -53,7 +53,7 @@
         </div>
       </div>
       <div v-else>
-        <p>You need to log in first before starting checkout process</p>
+        <p>Porfavor inicia sesion antes de iniciar el proceso de pago</p>
       </div>
     </div>
   </div>

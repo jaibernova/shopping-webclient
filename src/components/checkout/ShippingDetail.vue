@@ -242,7 +242,7 @@ export default {
       shippingDeet: null,
       description: '',
       isUpdate: false,
-      countryOptions: ['Bangladesh', 'Nepal'],
+      countryOptions: ['Colombia'],
     };
   },
 

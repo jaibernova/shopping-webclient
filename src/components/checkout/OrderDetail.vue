@@ -35,7 +35,7 @@
             </b-col>
             <b-col
               class="align-right"
-            >{{item ? item.aggregatedPrice.currency : ''}} {{item ? item.aggregatedPrice.amount : ''}}</b-col>
+            >$ {{item ? item.aggregatedPrice.amount : ''}}</b-col>
           </b-row>
         </li>
       </ul>
@@ -97,7 +97,7 @@
           <strong>Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>{{cartTotal.currency}} {{parseFloat(cartTotal.amount).toFixed(2)}}</strong>
+          <strong>$ {{parseFloat(cartTotal.amount).toFixed(2)}}</strong>
         </b-col>
       </b-row>
     </div>

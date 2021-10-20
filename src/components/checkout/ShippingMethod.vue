@@ -1,11 +1,11 @@
 <template>
   <div id="shipping-detail" class="align-left">
     <br>
-    <h4>Shipping Method</h4>
+    <h4>Metodo de envio</h4>
     <hr>
     <div v-if="isSessionActive">
       <b-form-group>
-        <label for="method">Method</label>
+        <label for="method">Plazo</label>
         <b-form-select
           v-model="shippingMethod"
           size="sm"
@@ -37,16 +37,16 @@ export default {
     return {
       shippingMethods: [
         {
-          _id: '20 day shipping',
-          name: '20 day shipping',
+          _id: 'Hoy mismo',
+          name: 'Hoy mismo',
         },
         {
-          _id: 'Expedited Shipping',
-          name: 'Expedited shipping',
+          _id: '1 a 3 dias',
+          name: '1 a 3 dias',
         },
         {
-          _id: 'No Rush Shipping',
-          name: 'No Rush Shipping',
+          _id: '3 a 5 dias',
+          name: '3 a 5 dias',
         },
       ],
     };

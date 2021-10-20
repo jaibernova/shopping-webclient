@@ -1,6 +1,6 @@
 <template>
   <div id="payment">
-    <h4>Payment</h4>
+    <h4>Metodo de pago</h4>
     <hr />
     <stripe-payment :totalCost="totalPrice" :stripeKey="stripeKey" @pay="startPayment" />
     <br />
