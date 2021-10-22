@@ -5,7 +5,7 @@
 
     <b-row>
       <b-col md="6">
-        <b-card bg-variant="light" title="Shipping Details" class="text-left">
+        <b-card bg-variant="light" title="Direccion de envio" class="text-left">
           <shipping-detail @selected="addressSelected"/>
           <shipping-method/>
           <transition
@@ -19,7 +19,7 @@
         </b-card>
       </b-col>
       <b-col md="6">
-        <b-card bg-variant="light" title="Your Order" class="text-left">
+        <b-card bg-variant="light" title="Tu carrito" class="text-left">
           <order-detail/>
         </b-card>
       </b-col>
@@ -110,7 +110,7 @@ export default {
 
     async handleCheckout() {
       if (!this.selectedAddress || !this.shippingMethod) {
-        notification.warn(this, 'The shipping method and address should be selected first.');
+        notification.warn(this, 'Por favor selecciona tiempo de entrega y direccion de envio.');
         return;
       }
       await this.$store.dispatch('cartStore/createCheckout', {

@@ -68,8 +68,8 @@
               />
             </div>
 
-            <b-nav-item @click="openCategory('Women')" class="veniqa-nav d-none d-md-block">Perros</b-nav-item>
-            <b-nav-item @click="openCategory('Men')" class="veniqa-nav d-none d-md-block">Gatos</b-nav-item>
+            <b-nav-item @click="openCategory('Perro')" class="veniqa-nav d-none d-md-block">Perros</b-nav-item>
+            <b-nav-item @click="openCategory('Gato')" class="veniqa-nav d-none d-md-block">Gatos</b-nav-item>
 
             <b-nav-item
               class="veniqa-nav d-none d-md-block"

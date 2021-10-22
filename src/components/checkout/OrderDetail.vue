@@ -44,7 +44,7 @@
     <div class="total-line" v-if="orders && orders.length > 0">
       <b-row>
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Peso total</strong>
         </b-col>
         <b-col
@@ -54,50 +54,50 @@
 
       <b-row>
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Sub Total</strong>
         </b-col>
-        <b-col class="align-right">$ {{parseFloat(subtotal.amount).toFixed(2)}}</b-col>
+        <b-col class="align-right">$ {{parseFloat(subtotal.amount)}}</b-col>
       </b-row>
 
       <b-row v-if="serviceCharge">
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Cargos por servicio</strong>
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(serviceCharge.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(serviceCharge.amount)}}</b-col>
       </b-row>
 
       <b-row v-if="shippingPrice">
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Costo de envio</strong>
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(shippingPrice.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(shippingPrice.amount)}}</b-col>
       </b-row>
 
       <b-row v-if="tariffPrice">
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Tarifa</strong>
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(tariffPrice.amount).toFixed(2)}}</b-col>
+        >$ {{parseFloat(tariffPrice.amount)}}</b-col>
       </b-row>
 
       <br>
       <b-row v-if="cartTotal">
         <!-- <hr> -->
-        <b-col cols="8" class="align-right">
+        <b-col cols="6" class="align-right">
           <strong>Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>$ {{parseFloat(cartTotal.amount).toFixed(2)}}</strong>
+          <strong>$ {{parseFloat(cartTotal.amount)}}</strong>
         </b-col>
       </b-row>
     </div>
@@ -107,7 +107,7 @@
         <div>No has ordenado aun.
           <br>
           <br>
-          <b-button @click="gotoDealPage()" class="primary-button">Llevame a la pagina de pagos</b-button>
+          <b-button @click="gotoDealPage()" class="primary-button">Llevame a la pagina de inicio</b-button>
         </div>
       </div>
     </div>

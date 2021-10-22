@@ -1,21 +1,25 @@
 <template>
   <div id="payment">
     <h4>Metodo de pago</h4>
-    <hr />
+    <!-- <hr />
     <stripe-payment :totalCost="totalPrice" :stripeKey="stripeKey" @pay="startPayment" />
-    <br />
+    <br /> -->
     <hr />
     <div class="align-center">
-      <b-btn class="primary-button" @click="handlePayment()">Pay with BKASH</b-btn>&nbsp;&nbsp;
+      <!-- <b-btn class="primary-button" @click="handlePayment()">Pay with BKASH</b-btn>&nbsp;&nbsp; -->
     </div>
     <!-- <b-btn disabled class="primary-button">Pay with Khalti</b-btn> -->
-    <div class="align-center">
-      <khalti :text="'Pay with Khalti'" :config="khaltiConfig" :total="totalPrice" />
+    <div class="align-left">
+      <p><strong>Click para pagar con PayU</strong></p>
+      <p><strong>Allí puedes pagar con debito, credito, Efecty, Nequi, Daviplata y mas</strong></p>
+      <p><payu></payu></p>           
+      <!-- <khalti :text="'Pay with Khalti'" :config="khaltiConfig" :total="totalPrice" /> -->
     </div>
   </div>
 </template>
 
 <script>
+import payu from '@/components/checkout/Payu.vue';
 import StripePayment from '@/components/checkout/stripe/Stripe.vue';
 import { mapGetters } from 'vuex';
 import notification from '@/services/notificationService';
@@ -23,11 +27,13 @@ import paymentService from '@/services/paymentService';
 import Config from '@/config.json';
 import { Khalti } from '@/components/checkout/khalti';
 
+
 export default {
   name: 'PaymentDetail',
   components: {
     StripePayment,
     Khalti,
+    payu,
   },
 
   data() {

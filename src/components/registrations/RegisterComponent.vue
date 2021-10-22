@@ -146,6 +146,8 @@ export default {
           name: this.name,
           recaptcha: this.captchaResp
         });
+      } else{
+        alert("Porfavor, recuerde llenar todos los campos y marcar el cuadrito 'im not a robot'")
       }
     },
 

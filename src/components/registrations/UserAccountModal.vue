@@ -106,7 +106,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'error',
-          text: 'User credentials are not correct. Please try again',
+          text: 'Datos incorrectos. Porfavor intente otravez',
         });
       }
       this.$store.commit('loaderStore/unsetLoader');

@@ -1,7 +1,7 @@
 <template>
   <div id="shipping-detail" class="align-left">
     <br>
-    <h4>Metodo de envio</h4>
+    <h4>Plazo de entrega estimado</h4>
     <hr>
     <div v-if="isSessionActive">
       <b-form-group>
@@ -13,15 +13,15 @@
           id="method"
           @input="selected()"
         >
-          <option :value="null" disabled>Please select an option</option>
+          <option :value="null" disabled>Porfavor seleccione una opcion</option>
           <option v-for="(ship,sid) in shippingMethods" v-bind:key="sid" :value="ship">{{ship.name}}</option>
         </b-form-select>
       </b-form-group>
-      <p class="info">Please select the shipping method to get final prices</p>
+      <p class="info">Porfavor seleccione el tiempo de entrega para poder continuar</p>
     </div>
     <div v-else>
       <div class="empty-info">
-        <p>Nothing to display</p>
+        <p>Nada que mostrar</p>
       </div>
     </div>
   </div>

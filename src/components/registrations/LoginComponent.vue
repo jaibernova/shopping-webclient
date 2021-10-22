@@ -93,37 +93,39 @@ export default {
       this.password = '';
     },
 
-    // async captchaValidate() {
-    //   try {
-    //     let {data} = await this.$axios({
-    //       headers: {
-    //         'Access-Control-Allow-Origin': '*',
-    //       },
-    //       url: ProxyUrl.recaptcha,
-    //       method: 'post',
-    //       params: {
-    //         secret: Config.RECAPTCHA_SECRET,
-    //         response: this.captchaResp,
-    //       }
-    //     });
+    async captchaValidate() {
+      try {
+        let {data} = await this.$axios({
+          headers: {
+            'Access-Control-Allow-Origin': '*',
+          },
+          url: ProxyUrl.recaptcha,
+          method: 'post',
+          params: {
+            secret: Config.RECAPTCHA_SECRET,
+            response: this.captchaResp,
+          }
+        });
 
-    //     if(data && data.success){
-    //       return true;
-    //     }else return false;
-    //   } catch (error) {
-    //     return false;
-    //   }
+        if(data && data.success){
+          return true;
+        }else return false;
+      } catch (error) {
+        return false;
+      }
 
-    // },
+    },
 
     async loginClicked() {
-      // let isValidated = await this.captchaValidate();
-      if (this.usernameState) { // } && this.captchaResp.length > 0) {
+      let isValidated = await this.captchaValidate();
+      if (this.usernameState && this.captchaResp.length > 0) {
         this.$emit('login', {
           email: this.username,
           password: this.password,
           recaptcha: this.captchaResp,
         });
+      } else {
+        alert("Porfavor resuelta el captcha")
       }
     },
 

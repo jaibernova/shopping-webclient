@@ -26,7 +26,14 @@
             <br>
             <a>Terminos y condiciones de uso</a>
           </b-col>
-          <b-col md="4">@2021 Pets love</b-col>
+          <b-col md="4">
+            <div>
+              <img src="@/assets/images/pago.png" alt="">
+            </div>
+            <div>
+            @2021 Pets love
+            </div>
+          </b-col>
           <b-col class="align-right center-sm" md="4">
             <a>Facebook</a>
             <br>
