@@ -31,6 +31,7 @@ export default {
           paymentSource: 'NONE'
         }
       });
+      
 
       if (data.httpStatus === 200) {
         const paymentId = data.responseData.payment_info[0].payment_id;
@@ -49,6 +50,13 @@ export default {
         }
       }
     },
+
+    async reiniciar({ commit }) {
+
+          commit('resetOrders');
+
+    },
+
     async createCheckout({ commit }, { address, shippingMethod }) {
       const reqData = {
         shippingMethod: shippingMethod._id,

@@ -12,7 +12,7 @@
     <div class="align-left">
       <p><strong>Click para pagar con PayU</strong></p>
       <p><strong>Allí puedes pagar con debito, credito, Efecty, Nequi, Daviplata y mas</strong></p>
-      <p><payu></payu></p>           
+      <p><payu ref="payu"></payu></p>           
       <!-- <khalti :text="'Pay with Khalti'" :config="khaltiConfig" :total="totalPrice" /> -->
     </div>
   </div>
@@ -93,6 +93,7 @@ export default {
 
     async handlePayment() {
       try {
+
         await this.$store.dispatch('cartStore/pay');
         notification.success(this, 'Payment processed');
         this.shippingMethod = null;
@@ -102,7 +103,21 @@ export default {
         notification.error(this, `Error: ${msg}`, 'all');
       }
     },
+    async reiniciar() {
+      try {
+
+        await this.$store.dispatch('cartStore/reiniciar');
+        notification.success(this, 'Payment processed');
+        this.shippingMethod = null;
+      } catch (error) {
+        console.log(error);
+        const msg = error.httpStatus ? '' : error.response.data.errorDetails;
+        notification.error(this, `Error: ${msg}`, 'all');
+      }
+    },
   },
+
+  
 
   computed: {
     ...mapGetters({

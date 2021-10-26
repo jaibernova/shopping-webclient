@@ -3,8 +3,8 @@
     <p href="javascript:void(0)" class="closebtn pointer" @click="$emit('close')">×</p>
     <div class="content">
       <ul class="category-list">
-        <li @click="openCatalogPage('Women')">Perros</li>
-        <li @click="openCatalogPage('Men')">Gatos</li>
+        <li @click="openCatalogPage('Perro')">Perros</li>
+        <li @click="openCatalogPage('Gato')">Gatos</li>
       </ul>
 
       <div class="footer align-center">

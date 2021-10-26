@@ -26,7 +26,7 @@ export default {
         {
           name: 'Max',
           price: 'Feliz con su Chunky',
-          url: 'https://www.paseaperros.com.co/uploads/thumbs/User/300x300/231577/IMG-20210111-191607.jpg',
+          url: 'https://www.minuto30.com/wp-content/uploads/2018/07/perro-pitbull-3.jpg',
         },
         {
           name: 'Lulu',

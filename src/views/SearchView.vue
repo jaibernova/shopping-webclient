@@ -1,8 +1,11 @@
 <template>
   <div id="search">
+    <div>
+      <p></p>
+    </div>
     <search-result-view
       :data="searchResult"
-      :title="'Search Result'"
+      :title="'Resultado de la busqueda'"
       :menu="categories"
       :term="term"
       :category="category"

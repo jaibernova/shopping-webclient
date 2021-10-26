@@ -3,7 +3,7 @@
     <!-- If the item is delivered, display when it was delivered -->
     <div v-if="isDelivered(itemStatusDeet)">
       <h6>
-        <strong>Delivered on {{itemStatusDeet.delivery.delivery_date | formatDate}}</strong>
+        <strong>Fecha de envio: {{itemStatusDeet.delivery.delivery_date | formatDate}}</strong>
       </h6>
       <br>
     </div>
@@ -49,7 +49,7 @@
         </b-col>
         <b-col md="3">
           <div class="info">
-            Si tiene algun inconveniente con la compra, porfavor contactenos al Whatsapp.
+            Si tiene algun inconveniente con la compra, porfavor contactanos al Whatsapp o al correo electronico.
             <br> <br>
 
             <a href="mailto:jdnovar@unal.edu.co">jdnovar@unal.edu.co</a>

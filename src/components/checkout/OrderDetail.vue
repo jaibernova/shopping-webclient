@@ -104,7 +104,7 @@
 
     <div v-if="orders && orders.length <= 0" class="order-empty">
       <div class="content">
-        <div>No has ordenado aun.
+        <div>Agrega algo al carrito.
           <br>
           <br>
           <b-button @click="gotoDealPage()" class="primary-button">Llevame a la pagina de inicio</b-button>

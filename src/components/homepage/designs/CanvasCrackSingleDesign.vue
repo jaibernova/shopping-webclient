@@ -14,7 +14,7 @@
                 <span class="name">{{product.name}}</span>
                 <span class="amount">$ {{product.price.amount}}</span>
 
-                <b-button class="primary-button" @click="$emit('shop', product)">Shop</b-button>
+                <b-button class="primary-button" @click="$emit('shop', product)">Ver producto</b-button>
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@
             <span class="name">{{product.name}}</span>
             <span class="amount">$ {{product.price.amount}}</span>
 
-            <span class="button-like" @click="$emit('shop', product)">Shop</span>
+            <span class="button-like" @click="$emit('shop', product)">Ver producto</span>
           </div>
         </div>
       </div>

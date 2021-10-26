@@ -1,18 +1,18 @@
 <template>
   <div id="cart" class="align-left">
     <p href="javascript:void(0)" class="closebtn pointer" @click="$emit('close')">×</p>
-    <h4 class="align-center">Cart</h4>
+    <h4 class="align-center">Carrito</h4>
 
     <div v-if="orders && orders.length <= 0" class="order-empty">
       <div class="content">
         <div>
-          {{isSessionActive ? 'Your cart is empty.' : 'Porfavor inicia sesion para agregar al carrito'}}
+          {{isSessionActive ? 'Your cart is empty.' : 'Porfavor inicia sesion para agregar productos al carrito'}}
           <br>
           <b-btn
             class="primary-button"
             v-if="!isSessionActive"
             @click="$router.push('/login')"
-          >Login</b-btn>
+          >Iniciar sesion</b-btn>
         </div>
       </div>
     </div>
@@ -33,7 +33,7 @@
               <strong>
                 {{item.product.name}}
                 <br>
-                {{item ? item.aggregatedPrice.currency : ''}} {{item ? item.aggregatedPrice.amount : ''}}
+                $ {{item ? item.aggregatedPrice.amount : ''}}
                 <br>
               </strong>
               <div style="font-size: 12px; margin-top: 5px; ">
@@ -43,7 +43,7 @@
                 >{{custom | customDisplay}} |</span>
               </div>
             </div>
-            <div class="delete" @click="deleteSelected(item)" style="margin: 5px 0px">Delete</div>
+            <div class="delete" @click="deleteSelected(item)" style="margin: 5px 0px">Quitar</div>
             <div>
               <b-form-select
                 size="sm"
@@ -66,12 +66,12 @@
           <strong>Sub Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>$ {{parseFloat(subtotal.amount).toFixed(2)}}</strong>
+          <strong>$ {{parseFloat(subtotal.amount).toFixed(0)}}</strong>
         </b-col>
       </b-row>
       <br>
-      <p class="info align-center">El costo final sera calculado al estar terminando la compra.</p>
-      <b-btn class="addToCart" @click="gotoCheckout()">Checkout</b-btn>
+      <p class="info align-center">El costo final sera calculado antes de finalizar la compra.</p>
+      <b-btn class="addToCart" @click="gotoCheckout()">Ir a pagar</b-btn>
     </div>
   </div>
 </template>
@@ -97,7 +97,7 @@ export default {
   },
 
   created() {
-    this.countOptions = Array.from(Array(200).keys(), val => val + 1);
+    this.countOptions = Array.from(Array(5).keys(), val => val + 1);
   },
 
   filters: {

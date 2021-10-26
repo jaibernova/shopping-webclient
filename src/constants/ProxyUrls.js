@@ -26,6 +26,7 @@ export default {
 
   createCheckout: 'orders/createCheckout',
   createPaymentToken: 'orders/createPaymentToken',
+  createPaymentToken2: 'ui/payu',
   completeCheckout: 'orders/completeCheckout',
 
   featuredUrl: '/ui/featured?name=',

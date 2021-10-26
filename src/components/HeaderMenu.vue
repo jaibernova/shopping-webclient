@@ -29,7 +29,7 @@
         <input
           type="text"
           class="special-search-input"
-          placeholder="Search for products"
+          placeholder="Buscar productos"
           v-model="searchTerm"
           style="width: 100%"
           @keyup.enter="searchProduct()"
@@ -52,7 +52,7 @@
               <input
                 type="text"
                 class="special-search-input d-none d-md-block"
-                placeholder="Search for products"
+                placeholder="Buscar productos"
                 v-if="showSearch"
                 v-model="searchTerm"
                 @keyup.enter="searchProduct()"
@@ -83,9 +83,9 @@
               right
               v-else
             >
-              <b-dropdown-item href="#">Perfil</b-dropdown-item>
-              <b-dropdown-item v-if="isSessionActive" to="/orders">Ordenes</b-dropdown-item>
-              <b-dropdown-item @click="logoutClicked()">Logout</b-dropdown-item>
+              <!-- <b-dropdown-item href="#">Perfil</b-dropdown-item> -->
+              <b-dropdown-item v-if="isSessionActive" to="/orders">Pedidos</b-dropdown-item>
+              <b-dropdown-item @click="logoutClicked()">Cerrar sesion</b-dropdown-item>
             </b-nav-item-dropdown>
             <!-- </b-nav-item> -->
             <!-- <b-nav-item class="veniqa-nav d-none d-md-block" to="/checkout"> -->

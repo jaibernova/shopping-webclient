@@ -20,17 +20,24 @@
             <h4>{{product.name}}</h4>
             <p>{{product.brand}}</p>
             <h5>
-              <span
+              <!-- <span
                 v-if="!product.marked_price || product.marked_price.amount <= 0"
                 :class="{'underline': product.marked_price && product.marked_price.amount > 0}"
               >$ {{product.price.amount}}</span>
               <span
                 v-if="product.marked_price && product.marked_price.amount > 0"
-              >$ {{product.marked_price.amount}} </span>
+              >$ {{product.marked_price.amount}} </span> -->
+              
+              <span
+                :class="{'underline': product.marked_price && product.marked_price.amount > 0}" style="color: red"
+              >$ {{product.marked_price.amount}} </span>                
+              <span
+              > $ {{product.price.amount}}</span>
+            
             </h5>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Agregar al carrito</b-button>
+            <b-button class="addToCart" @click="shop(product)">Ver producto</b-button>
             <!-- </router-link> -->
           </b-col>
         </b-col>
@@ -50,18 +57,16 @@
             <p>{{product.brand}}</p>
             <p>
               <strong>
-                <span
-                  v-if="!product.marked_price || product.marked_price.amount <= 0"
-                  :class="{'underline': product.marked_price && product.marked_price.amount > 0}"
-                >$ {{product.price.amount}}</span>
-                <span
-                  v-if="product.marked_price && product.marked_price.amount > 0"
-                >$ {{product.marked_price.amount}}</span>
+              <span
+                :class="{'underline': product.marked_price && product.marked_price.amount > 0}" style="color: red"
+              >$ {{product.marked_price.amount}} </span>                
+              <span
+              >$ {{product.price.amount}}</span>
               </strong>
             </p>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Agregar al carrito</b-button>
+            <b-button class="addToCart" @click="shop(product)">Ver producto</b-button>
           </div>
         </div>
       </div>

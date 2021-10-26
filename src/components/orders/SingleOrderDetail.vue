@@ -27,16 +27,16 @@
             </div>
           </template>
           <div class="card-text card-font">
-            <p>Total Weight: <strong>{{order.cart.totalWeight.quantity}} {{order.cart.totalWeight.unit}}</strong></p>
-            <p>Sub Total Price: <strong>$ {{order.cart.subTotalPrice.amount | formattedAmount}}</strong></p>
-            <p>Service Charge: <strong>$ {{order.cart.serviceCharge.amount | formattedAmount}}</strong></p>
-            <p>Shipping Price: <strong>$ {{order.cart.shippingPrice.amount | formattedAmount}}</strong></p>
-            <p>Tariff Price: <strong>$ {{order.cart.tariffPrice.amount | formattedAmount}}</strong></p>
-            <p>Total Price: <strong>$ {{order.cart.totalPrice.amount | formattedAmount}}</strong></p>
+            <p>Peso total: <strong>{{order.cart.totalWeight.quantity}} {{order.cart.totalWeight.unit}}</strong></p>
+            <p>Sub Total: <strong>$ {{order.cart.subTotalPrice.amount}}</strong></p>
+            <p>Caro adicional: <strong>$ {{order.cart.serviceCharge.amount}}</strong></p>
+            <p>Precio de envio: <strong>$ {{order.cart.shippingPrice.amount}}</strong></p>
+            <p>Tarifa: <strong>$ {{order.cart.tariffPrice.amount}}</strong></p>
+            <p>Precio total: <strong>$ {{order.cart.totalPrice.amount}}</strong></p>
           </div>
         </b-card>
 
-        <b-card bg-variant="light" header="Shipping Address" v-if="addr">
+        <b-card bg-variant="light" header="Direccion de envio" v-if="addr">
           <div class="card-text card-font">
             <p>
               {{addr.firstName}} {{addr.lastName}} </p>
@@ -56,22 +56,23 @@
           </div>
         </b-card>
 
-        <b-card bg-variant="light" header="Payment Method" v-if="payments.length > 0">
+        <b-card bg-variant="light" header="Metodo de pago" v-if="payments.length > 0">
           <div class="card-text card-font">
             <p v-for="(payment, pind) in payments" v-bind:key="pind">
               <strong>
-                {{payment.source}}&nbsp;&nbsp;&nbsp;&nbsp;
-                <span class="green info">{{payment.type}}</span>
+                <!-- {{payment.source}}&nbsp;&nbsp;&nbsp;&nbsp; -->
+                <!-- <span class="green info">{{payment.type}}</span>                 -->
+                <span class="green info">ELECTRONICO</span>
               </strong>
               <br>
-              $ {{payment.amount_in_payment_currency.amount }} 
+              <!-- $ {{payment.amount_in_payment_currency.amount }}  -->
             </p>
           </div>
         </b-card>
       </b-card-group>
 
       <div class="cart-items">
-        <h5>Cart Items</h5>
+        <h5>Productos comprados</h5>
         <br>
         <div v-for="(item, iind) in order.cart.items" v-bind:key="iind">
           <single-order-item :item="item"/>

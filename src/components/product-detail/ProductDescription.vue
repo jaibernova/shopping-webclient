@@ -133,8 +133,8 @@ export default {
         this.$notify({
           group: 'toast',
           type: 'success',
-          text: `Added ${this.product.name} to the cart`,
-          title: 'Added to Cart<font-awesome-icon icon="cart"/>',
+          text: `Se agrego ${this.product.name} al carrito`,
+          title: 'Agregado al carrito<font-awesome-icon icon="cart"/>',
         });
       } else {
         this.$notify({
