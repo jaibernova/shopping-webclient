@@ -60,6 +60,16 @@
         <b-col class="align-right">$ {{parseFloat(subtotal.amount)}}</b-col>
       </b-row>
 
+      <b-row v-if="shippingPrice">
+        <!-- <hr> -->
+        <b-col cols="6" class="align-right">
+          <strong>Costo de envio</strong>
+        </b-col>
+        <b-col
+          class="align-right"
+        >$ {{parseFloat(shippingPrice.amount)}}</b-col>
+      </b-row>
+
       <b-row v-if="serviceCharge">
         <!-- <hr> -->
         <b-col cols="6" class="align-right">
@@ -70,15 +80,7 @@
         >$ {{parseFloat(serviceCharge.amount)}}</b-col>
       </b-row>
 
-      <b-row v-if="shippingPrice">
-        <!-- <hr> -->
-        <b-col cols="6" class="align-right">
-          <strong>Costo de envio</strong>
-        </b-col>
-        <b-col
-          class="align-right"
-        >$ {{parseFloat(shippingPrice.amount)}}</b-col>
-      </b-row>
+
 
       <b-row v-if="tariffPrice">
         <!-- <hr> -->

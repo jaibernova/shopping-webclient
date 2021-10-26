@@ -56,7 +56,7 @@
                     <div class="carousel-item3 active" >
                       <div class="carousel-container">
                         <div class="carousel-content container">
-                          <h2 class="animate__animated animate__fadeInDown">Compra y recibe al instante</h2>
+                          <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $100.000</h2>
                           <p class="animate__animated animate__fadeInUp">Agrega tus productos al carrito y selecciona el tiempo de entrega que prefieras</p>
                           <a href="#/login?previousPath=%2F" class="btn-get-started animate__animated animate__fadeInUp scrollto">Registrate</a>
                         </div>

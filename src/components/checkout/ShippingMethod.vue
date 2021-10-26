@@ -37,16 +37,16 @@ export default {
     return {
       shippingMethods: [
         {
-          _id: 'Hoy mismo',
-          name: 'Hoy mismo',
+          _id: 'Mañana',
+          name: 'Mañana',
         },
         {
-          _id: '1 a 3 dias',
-          name: '1 a 3 dias',
+          _id: '2 dias',
+          name: '2 dias',
         },
         {
-          _id: '3 a 5 dias',
-          name: '3 a 5 dias',
+          _id: '3 dias',
+          name: '3 dias',
         },
       ],
     };
