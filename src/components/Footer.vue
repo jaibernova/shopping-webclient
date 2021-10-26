@@ -31,7 +31,7 @@
               <img src="@/assets/images/pago.png" alt="">
             </div>
             <div>
-            @2021 Pets love
+            @2021 Luka Petshop
             </div>
           </b-col>
           <b-col class="align-right center-sm" md="4">

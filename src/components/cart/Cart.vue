@@ -128,7 +128,7 @@ export default {
             ]);
             notification.success(
               this,
-              'The cart has been successfully updated.',
+              'El carrito se actualizo satisfactoriamente.',
             );
           } catch (err) {
             console.log('Error', err);

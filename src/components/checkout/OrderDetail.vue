@@ -129,7 +129,7 @@ export default {
   },
 
   created() {
-    this.countOptions = Array.from(Array(200).keys(), val => val + 1);
+    this.countOptions = Array.from(Array(5).keys(), val => val + 1);
   },
 
   methods: {
@@ -158,7 +158,7 @@ export default {
         if (item.counts > 0) {
           try {
             await this.$store.dispatch('cartStore/updateOrders', [item]);
-            notification.success(this, 'The cart has been successfully updated.');
+            notification.success(this, 'El carrito se actualizo satisfactoriamente.');
           } catch (err) {
             console.log('Error', err);
             notification.error(

@@ -14,7 +14,7 @@
               <br>
               {{add.addressLine1}} {{add.addressLine2}}
               <br>
-              {{add.state}} {{add.country}} {{add.zipCode}}
+              {{add.state}} {{add.country}} 
             </b-col>
             <b-col>
               <div class="align-right">
@@ -34,7 +34,7 @@
 
     <!-- Show list of existing addresses here with choice to choose -->
     <a @click="showAddAddress()" v-if="isSessionActive">
-      <font-awesome-icon icon="plus"/>&nbsp;&nbsp; Add a new address
+      <font-awesome-icon icon="plus"/>&nbsp;&nbsp; Agregar una nueva direccion
     </a>
 
 
@@ -287,6 +287,7 @@ export default {
         address: cloned,
         action: 'delete',
       });
+      this.$router.go()
     },
 
     async saveAddress() {
@@ -318,6 +319,7 @@ export default {
           this.resetFields();
           this.isShowAddAddress = false;
         }
+        this.$router.go()
       }
     },
   },

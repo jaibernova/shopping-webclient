@@ -29,14 +29,14 @@
           <div class="card-text card-font">
             <p>Peso total: <strong>{{order.cart.totalWeight.quantity}} {{order.cart.totalWeight.unit}}</strong></p>
             <p>Sub Total: <strong>$ {{order.cart.subTotalPrice.amount}}</strong></p>
-            <p>Caro adicional: <strong>$ {{order.cart.serviceCharge.amount}}</strong></p>
-            <p>Precio de envio: <strong>$ {{order.cart.shippingPrice.amount}}</strong></p>
+            <p>Cargo adicional: <strong>$ {{order.cart.serviceCharge.amount}}</strong></p>
+            <p>Costo de envio: <strong>$ {{order.cart.shippingPrice.amount}}</strong></p>
             <p>Tarifa: <strong>$ {{order.cart.tariffPrice.amount}}</strong></p>
             <p>Precio total: <strong>$ {{order.cart.totalPrice.amount}}</strong></p>
           </div>
         </b-card>
 
-        <b-card bg-variant="light" header="Direccion de envio" v-if="addr">
+        <b-card bg-variant="light" header="Datos de envio" v-if="addr">
           <div class="card-text card-font">
             <p>
               {{addr.firstName}} {{addr.lastName}} </p>
