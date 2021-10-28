@@ -54,7 +54,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'success',
-          text: 'You have been successfully logged out.',
+          text: 'Has cerrado sesion satisfactoriamente.',
         });
         this.$store.commit('cartStore/resetOrders');
         this.$store.commit('shippingStore/resetAddresses');
@@ -63,7 +63,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'error',
-          text: 'Sorry but we could not log you out at the moment.',
+          text: 'Lo sentimos, no podemos cerrar sesion en este momento.',
         });
       }
 

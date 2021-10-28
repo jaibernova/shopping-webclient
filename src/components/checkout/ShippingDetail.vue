@@ -28,7 +28,7 @@
     </div>
     <div v-else-if="allAddresses.length <= 0 && !isShowAddAddress">
       <div class="empty-info">
-        <p>Nada que mostrar</p>
+        <p>Porfavor agrega una direccion de entrega</p>
       </div>
     </div>
 
@@ -82,7 +82,7 @@
         </b-row>
 
         <b-form-group>
-          <label for="address1">Direccion 1:</label>
+          <label for="address1">Direccion principal:</label>
           <b-form-input
             id="address1"
             type="text"
@@ -100,14 +100,14 @@
         </b-form-group>
 
         <b-form-group>
-          <label for="address2">Direccion 2:</label>
+          <label for="address2">Instrucciones adicionales de entrega:</label>
           <b-form-input
             id="address2"
             type="text"
             name="address2"
             size="sm"
             v-model="shippingDeet.addressLine2"
-            placeholder="Ingresa otra direccion alternativa"
+            placeholder="Casa, conjunto, bloque, etc..."
           ></b-form-input>
         </b-form-group>
 

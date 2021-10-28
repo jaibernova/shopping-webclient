@@ -12,7 +12,7 @@
             class="primary-button"
             v-if="!isSessionActive"
             @click="$router.push('/login')"
-          >Iniciar sesion</b-btn>
+          >Inicia sesion o registrate</b-btn>
         </div>
       </div>
     </div>

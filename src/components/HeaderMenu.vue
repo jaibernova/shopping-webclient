@@ -75,7 +75,7 @@
               class="veniqa-nav d-none d-md-block"
               to="/login"
               v-if="!isSessionActive"
-            >Iniciar sesion</b-nav-item>
+            >Inicia sesion o registrate</b-nav-item>
 
             <b-nav-item-dropdown
               class="veniqa-nav d-none d-md-block"
@@ -183,7 +183,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'success',
-          text: 'You have been successfully logged out.',
+          text: 'Has cerrado sesion satisfactoriamente.',
         });
         this.$store.commit('cartStore/resetOrders');
         this.$store.commit('shippingStore/resetAddresses');
@@ -192,7 +192,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'error',
-          text: 'Sorry but we could not log you out at the moment.',
+          text: 'Lo sentimos, no fue posible cerrar sesion en este momento.',
         });
       }
     },

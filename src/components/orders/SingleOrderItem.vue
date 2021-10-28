@@ -26,7 +26,7 @@
 
             <div class="info">
               <strong>$ {{item.aggregatedPrice.amount}}</strong><br>
-              <span class="info">Vendido por: </span>&nbsp;&nbsp;
+              <span class="info">Tipo: </span>&nbsp;&nbsp;
               <strong>{{item.product.store}}</strong>
               <p>
                 <span class="info">Cantidad:</span> &nbsp;&nbsp;
@@ -49,10 +49,10 @@
         </b-col>
         <b-col md="3">
           <div class="info">
-            Si tiene algun inconveniente con la compra, porfavor contactanos al Whatsapp o al correo electronico.
+            Porfavor contactanos al Whatsapp o al correo electronico Si tienes algun inconveniente con la compra.
             <br> <br>
 
-            <a href="mailto:jdnovar@unal.edu.co">jdnovar@unal.edu.co</a>
+            <a href="mailto:soporte@lukapetshop.com.co">soporte@lukapetshop.com.co</a>
           </div>
         </b-col>
       </b-row>

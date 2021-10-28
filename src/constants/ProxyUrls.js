@@ -1,5 +1,5 @@
 export default {
-  baseUrl: 'https://shop-server.veniqa.com/',
+  baseUrl: 'https://serverluka.lukapetshop.com.co/',
   registerUrl: '/security/signup',
   loginUrl: '/security/login',
   logoutUrl: '/security/logout',

@@ -3,7 +3,7 @@
     <div class="page">
       <div>
         <div v-if="isReset">
-          <h2>Ingresa tu contraseña</h2>
+          <h2>Ingresa tu nueva contraseña</h2>
           <b-form-group>
             <b-form-input
               id="password"
@@ -24,7 +24,7 @@
               name="confirmPassword"
               :state="confirmPasswordState"
               v-model="confirmPassword"
-              placeholder="Re-ingresa tu contraseña"
+              placeholder="Confirma tu contraseña"
               aria-describedby="confirmPasswordFeedback"
             ></b-form-input>
             <b-form-invalid-feedback
@@ -32,10 +32,10 @@
             >Las contraseñas deben coincidir.</b-form-invalid-feedback>
           </b-form-group>
 
-          <b-button @click="resetPassword()" class="primary-button">Reiniciar contraseña</b-button>
+          <b-button @click="resetPassword()" class="primary-button">Reestablecer la contraseña</b-button>
         </div>
         <div v-else>
-          <h2>Re-ingresa tu correo para enviarte el correo de reinicio</h2>
+          <h2>Re-ingresa tu correo para enviarte el correo para reestablecer tu contraseña</h2>
           <b-form-group>
             <b-form-input
               id="username"
@@ -48,10 +48,10 @@
             ></b-form-input>
             <b-form-invalid-feedback id="usernameFeedback">
               <!-- This will only be shown if the preceeding input has an invalid state -->
-              Enter a valid email address
+              Porfavor ingresa un correo
             </b-form-invalid-feedback>
           </b-form-group>
-          <b-button @click="resetButtonClick()" class="primary-button">Resend Email</b-button>
+          <b-button @click="resetButtonClick()" class="primary-button">Reenviar correo</b-button>
         </div>
       </div>
     </div>
@@ -129,14 +129,14 @@ export default {
             this.$notify({
               group: 'all',
               type: 'success',
-              text: 'The email was just sent. Please check your email and follow the instructions.',
+              text: 'El correo se envio satisfactoriamente. Porfavor revisa tu cor.',
             });
           }
         } catch (err) {
           this.$notify({
             group: 'all',
             type: 'error',
-            text: 'The email could not be sent right now. Please try again later',
+            text: 'El correo no pudo ser enviado. Porfavor intente nuevamente',
           });
         }
       }

@@ -48,6 +48,10 @@ export default {
           _id: '3 dias',
           name: '3 dias',
         },
+        {
+          _id: 'Otro, escribenos por Whatsapp',
+          name: 'Otro, escribenos por Whatsapp',
+        },        
       ],
     };
   },

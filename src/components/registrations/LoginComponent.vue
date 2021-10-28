@@ -36,28 +36,28 @@
       ></b-form-input>
       <!-- <b-form-invalid-feedback id="passwordFeedback">Enter at least 6 characters.</b-form-invalid-feedback> -->
     </b-form-group>
-    <vue-recaptcha @verify="onVerify" @expired="onExpired" :sitekey="recaptchaKey"></vue-recaptcha>
-    <p class="info align-left">Porfavor resuelve el captcha antes de iniciar sesion.</p>
+    <!-- <vue-recaptcha @verify="onVerify" @expired="onExpired" :sitekey="recaptchaKey"></vue-recaptcha> -->
+    <!-- <p class="info align-left">Porfavor resuelve el captcha antes de iniciar sesion.</p> -->
 
     <p class="forget-password" v-if="!forgotEnabled" @click="forgetPassword()">Olvidaste tu contraseña?</p>
 
     <b-btn class="login-button" v-if="!forgotEnabled" @click="loginClicked()">Iniciar sesion</b-btn>
-    <b-btn class="login-button" v-if="forgotEnabled" @click="resetPassword()">Reiniciar contraseña</b-btn>
+    <b-btn class="login-button" v-if="forgotEnabled" @click="resetPassword()">Reestablecer la contraseña</b-btn>
 
-    <p class="register-class" @click="register()">Nuevo usuario? Registrate aqui.</p>
+    <strong><p class="register-class" @click="register()">Nuevo usuario? Registrate aqui.</p></strong>
     <div class="modal-bottom"></div>
   </div>
 </template>
 
 <script>
-import VueRecaptcha from 'vue-recaptcha';
+// import VueRecaptcha from 'vue-recaptcha';
 import ProxyUrl from '@/constants/ProxyUrls';
 import Config from '@/config.json';
 
 export default {
   name: 'LoginComponent',
   components: {
-    VueRecaptcha
+    // VueRecaptcha
   },  
   data() {
     return {
@@ -74,13 +74,13 @@ export default {
   },
 
   methods: {
-    async onVerify(response) {
-      this.captchaResp = response;
-    },
-    onExpired() {
-      // this.resetRecaptcha();
-      this.captchaResp = '';
-    },
+    // async onVerify(response) {
+    //   this.captchaResp = response;
+    // },
+    // onExpired() {
+    //   // this.resetRecaptcha();
+    //   this.captchaResp = '';
+    // },
 
     validEmail(email) {
       // eslint-disable-next-line
@@ -93,39 +93,40 @@ export default {
       this.password = '';
     },
 
-    async captchaValidate() {
-      try {
-        let {data} = await this.$axios({
-          headers: {
-            'Access-Control-Allow-Origin': '*',
-          },
-          url: ProxyUrl.recaptcha,
-          method: 'post',
-          params: {
-            secret: Config.RECAPTCHA_SECRET,
-            response: this.captchaResp,
-          }
-        });
+    // async captchaValidate() {
+    //   try {
+    //     let {data} = await this.$axios({
+    //       headers: {
+    //         'Access-Control-Allow-Origin': '*',
+    //       },
+    //       url: ProxyUrl.recaptcha,
+    //       method: 'post',
+    //       params: {
+    //         secret: Config.RECAPTCHA_SECRET,
+    //         response: this.captchaResp,
+    //       }
+    //     });
 
-        if(data && data.success){
-          return true;
-        }else return false;
-      } catch (error) {
-        return false;
-      }
+    //     if(data && data.success){
+    //       return true;
+    //     }else return false;
+    //   } catch (error) {
+    //     return false;
+    //   }
 
-    },
+    // },
 
     async loginClicked() {
-      let isValidated = await this.captchaValidate();
-      if (this.usernameState && this.captchaResp.length > 0) {
+      // let isValidated = await this.captchaValidate();
+      // if (this.usernameState && this.captchaResp.length > 0) {
+      if (this.usernameState > 0) {
         this.$emit('login', {
           email: this.username,
           password: this.password,
           recaptcha: this.captchaResp,
         });
       } else {
-        alert("Porfavor resuelta el captcha")
+        alert("Porfavor intente nuevamente")
       }
     },
 
@@ -143,14 +144,14 @@ export default {
             this.$notify({
               group: 'all',
               type: 'success',
-              text: 'The email was just sent. Please check your email and follow the instructions.',
+              text: 'El correo fue enviado satisfactoriamente. Porfavor revisa tu correo y sigue las instrucciones.',
             });
           }
         } catch (err) {
           this.$notify({
             group: 'all',
             type: 'error',
-            text: 'The email could not be sent right now. Please try again later',
+            text: 'El correo no pudo ser enviado.Porfavor intenta nuevamente',
           });
         }
       }

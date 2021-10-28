@@ -130,14 +130,14 @@ export default {
           this.$notify({
             group: 'all',
             type: 'success',
-            text: 'Confirmation email has been sent to your email address. Please check your email.',
+            text: 'El correo de confirmacion fue enviado satisfactoriamente. Porfavor revisa tu correo.',
           });
         }
       } catch (err) {
         this.$notify({
           group: 'all',
           type: 'error',
-          text: 'There was an error sending out the email. Please try again later',
+          text: 'Ocurrio un error al enviar el correo. Porfavor intenta nuevamente',
         });
       }
     },

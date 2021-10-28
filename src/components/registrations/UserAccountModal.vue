@@ -100,7 +100,7 @@ export default {
         this.$notify({
           group: 'all',
           type: 'success',
-          text: 'Successfully logged in',
+          text: 'Inicio de sesion exitoso',
         });
       } catch (err) {
         this.$notify({
@@ -126,7 +126,7 @@ export default {
           group: 'all',
           type: 'success',
           text:
-            'User successfully created. Please check your inbox to confirm email',
+            'Usuario creado satisfactoriamente. Porfavor revisa tu correo para confirmar tu email',
         });
       } catch (err) {
         console.log('Error', err);
@@ -134,7 +134,7 @@ export default {
           group: 'all',
           type: 'error',
           text:
-            'User could not be created at the moment. Please check if you already have an account.',
+            'El usuario no pudo ser creado. Porfavor revisa si ya posees una cuenta.',
         });
       }
     },
@@ -151,6 +151,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
+
 .account-table {
   display: table;
   height: 100%;
@@ -167,7 +168,7 @@ export default {
 
     .image {
       height: 100px;
-      width: 100%;
+      width: 100px;
     }
   }
 }
@@ -186,5 +187,6 @@ export default {
   background-repeat: no-repeat;
   background-size: cover;
   height: 100%;
+  transform: scale();
 }
 </style>

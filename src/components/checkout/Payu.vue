@@ -26,7 +26,7 @@
       <input
         name="responseUrl"
         type="hidden"
-        value="http://localhost:5201/#/orders"
+        value="https://lukapetshop.com.co/#/orders"
       />
       <input
         name="confirmationUrl"

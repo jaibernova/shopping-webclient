@@ -104,7 +104,7 @@ export default {
             this.$notify({
               group: 'all',
               type: 'success',
-              text: 'Email successfully sent. Please check your inbox.',
+              text: 'El correo se envio satisfactoriamente. Porfavor reivsa tu correo.',
             });
 
             const sessionActive = this.$store.getters['authStore/isSessionActive'];
@@ -117,7 +117,7 @@ export default {
           this.$notify({
             group: 'all',
             type: 'error',
-            text: 'Some error occured while trying to send the email. Please try later.',
+            text: 'Un error ocurrio cuando se envio el email. Porfavor intenta otra vez.',
           });
         }
       }

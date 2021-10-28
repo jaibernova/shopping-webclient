@@ -156,6 +156,7 @@ html,
 body {
   margin: 0px;
   height: 100%;
+  zoom: 101%;
 }
 
 .container {
