@@ -27,8 +27,8 @@
       </ul>
     </div>
     <div v-else-if="allAddresses.length <= 0 && !isShowAddAddress">
-      <div class="empty-info">
-        <p>Porfavor agrega una direccion de entrega</p>
+      <div class="align-center">
+        <strong><p>Porfavor agrega una direccion de entrega</p></strong>
       </div>
     </div>
 
@@ -54,6 +54,8 @@
                 id="firstName"
                 type="text"
                 name="firstName"
+
+                
                 size="sm"
                 :state="firstNameState"
                 v-model="shippingDeet.firstName"
@@ -115,16 +117,18 @@
           <b-col>
             <b-form-group>
               <label for="city">Ciudad:</label>
-              <b-form-input
+              <b-form-select
                 id="city"
                 type="text"
                 name="text"
+                :options="cityOptions"                
+
                 :state="cityState"
                 size="sm"
                 v-model="shippingDeet.city"
                 placeholder="Ingresa tu ciudad"
                 aria-describedby="cityStatee"
-              ></b-form-input>
+              ></b-form-select>
               <b-form-invalid-feedback id="cityStatee">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
                 Porfavor ingresa la ciudad antes de continuar.
@@ -242,7 +246,8 @@ export default {
       shippingDeet: null,
       description: '',
       isUpdate: false,
-      countryOptions: ['Colombia',"Nepal", "Bangladesh"],
+      countryOptions: ['Colombia'],
+      cityOptions: ['Bogota']
     };
   },
 

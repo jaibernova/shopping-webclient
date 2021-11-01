@@ -5,11 +5,12 @@
       <ul class="category-list">
         <li @click="openCatalogPage('Perro')">Perros</li>
         <li @click="openCatalogPage('Gato')">Gatos</li>
+        <li @click="gotoOrders()">Ver pedidos</li>
       </ul>
 
       <div class="footer align-center">
         <div v-if="isSessionActive">
-          <p @click="gotoOrders()">Ver ordenes</p>
+          <!-- <p @click="gotoOrders()">Ver ordenes</p> -->
           <p @click="logoutClicked()">Salir</p>
         </div>
         <div v-else>

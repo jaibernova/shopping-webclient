@@ -38,15 +38,28 @@
           >Obtener el precio final</b-button>
           <br />
           <br />
+          
         </div>
+        
         <div v-else-if="!emailConfirmed">
+        <!-- <div class="bottom-space"></div>
+        <div class="bottom-space"></div>
+        <div class="bottom-space"></div>
+        <div class="bottom-space"></div>         -->
           <p>Por favor confirma tu correo antes de realizar el pago.
-            Porfavor presiona el boton inferior para reenviar el correo de confirmacion</p>
+            Presiona el boton inferior para reenviar el correo de confirmacion.</p>
           <b-button
-            class="primary-button"
+            class="secondary-button"
             @click="resendEmailConfirmation()"
-          >Reenviar correo de confirmacion</b-button>
+          >Reenviar correo de confirmacion</b-button>   
+          <p>Si ya confirmaste tu correo exitosamente.
+            Porfavor presiona el boton inferior para volver a iniciar sesion y asi refrescar la sesion actual.</p>
+          <b-button
+            class="secondary-button"
+            @click="iniciarSesionNuevamente()"
+          >Ir a iniciar sesion </b-button>              
         </div>
+
 
         <div v-if="checkoutInitiated">
 
@@ -136,12 +149,21 @@ export default {
       } catch (err) {
         this.$notify({
           group: 'all',
-          type: 'error',
-          text: 'Ocurrio un error al enviar el correo. Porfavor intenta nuevamente',
+          type: 'success',
+          text: 'El correo fue confirmado exitosamente. Ingresa nuevamente porfavor',
         });
+        this.$store.commit('cartStore/resetOrders');
+        this.$store.commit('shippingStore/resetAddresses');
+        this.$router.push('/login?previousPath=%2F');        
       }
     },
+    async iniciarSesionNuevamente() {
+        this.$store.commit('cartStore/resetOrders');
+        this.$store.commit('shippingStore/resetAddresses');
+        this.$router.push('/login?previousPath=%2F');     
+    },    
   },
+  
 
   computed: {
     ...mapGetters({
@@ -165,22 +187,24 @@ export default {
 </script>
 
 <style lang="scss">
+
+
 .checkout {
   padding: 0rem 2rem;
   margin-bottom: 10px;
   padding-bottom: 3rem;
-  min-height: 90vh;
+  min-height: 60vh;
   position: relative;
   background-color: #eaecee;
 
   .bottom-space {
-    height: 40px;
+    height: 10px;
   }
 
   .checkout-button {
-    margin-top: 20px;
+    margin-top: 1px;
     padding: 0rem 2rem;
-    position: absolute;
+    position: relative;
     bottom: 0;
     left: 0;
     right: 0;

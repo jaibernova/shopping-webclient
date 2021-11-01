@@ -3,7 +3,9 @@
     <!-- This previews design specific to the type of the design we have  -->
     <div v-if="design && design.config.design_type === 'Stripe'">
       <stripe-design :products="design.products" @shop="shop"/>
+
     </div>
+    
     <div v-else-if="design && design.config.design_type === 'Canvas Left Cracked'">
       <canvas-crack-single :product="design.products[0]" :type="2"  @shop="shop"/>
     </div>

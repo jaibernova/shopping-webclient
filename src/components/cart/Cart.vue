@@ -6,7 +6,7 @@
     <div v-if="orders && orders.length <= 0" class="order-empty">
       <div class="content">
         <div>
-          {{isSessionActive ? 'Your cart is empty.' : 'Porfavor inicia sesion para agregar productos al carrito'}}
+          {{isSessionActive ? 'Tu carrito esta vacio.' : 'Porfavor inicia sesion para agregar productos al carrito'}}
           <br>
           <b-btn
             class="primary-button"

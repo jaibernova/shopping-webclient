@@ -14,7 +14,14 @@
                         <div class="carousel-content container">
                           <h2 class="animate__animated animate__fadeInDown">Siguenos en instagram</h2>
                           <p class="animate__animated animate__fadeInUp">Para estar al tanto de todos nuestros nuevos productos</p>
-                          <a href="#about" class="btn-get-started animate__animated animate__fadeInUp scrollto">Instagram</a>
+
+                          <form     
+                           action="https://instagram.com"     
+                          >
+                            <button formtarget="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Instagram</button>
+
+                           </form>                          
+
                         </div>
                       </div>
                     </div>
@@ -35,8 +42,14 @@
                       <div class="carousel-container">
                         <div class="carousel-content container">
                           <h2 class="animate__animated animate__fadeInDown">¿Tienes dudas?</h2>
-                          <p class="animate__animated animate__fadeInUp">¿O quieres pagar contraentrega? Haz click en el logo de whatsapp que se encuentra en la parte inferior derecha de la pagina. Te responderemos al instante </p>
-                          <a href="https://api.whatsapp.com/send?phone=+573174081631&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20producto" target="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Whatsapp</a>
+                          <p class="animate__animated animate__fadeInUp">Haz click en el logo de whatsapp que se encuentra en la parte inferior derecha de la pagina. Te responderemos al instante </p>
+                          <form     
+                           action="https://api.whatsapp.com/send?phone=+573175601565&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20producto"     
+                          >
+                            <button formtarget="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Whatsapp</button>
+
+                           </form>                             
+
                         </div>
                       </div>
                     </div>
@@ -56,9 +69,16 @@
                     <div class="carousel-item3 active" >
                       <div class="carousel-container">
                         <div class="carousel-content container">
-                          <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $100.000</h2>
+                          <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $130.000</h2>
                           <p class="animate__animated animate__fadeInUp">Agrega tus productos al carrito y selecciona el tiempo de entrega que prefieras</p>
-                          <a href="#/login?previousPath=%2F" class="btn-get-started animate__animated animate__fadeInUp scrollto">Registrate</a>
+                         
+                          <form     
+                           action="#/login?previousPath=%2F"     
+                          >
+                            <button  class="btn-get-started animate__animated animate__fadeInUp scrollto">Registrate</button>
+
+                           </form>                             
+
                         </div>
                       </div>
                     </div>
@@ -121,7 +141,7 @@
   background-position: top right;
   background-repeat: no-repeat;
   overflow: hidden;
-    background-image: url('https://tiendaproyecto2021-dev.s3.amazonaws.com/perroygato.jpeg');
+    background-image: url('https://tiendaproyecto2021-dev.s3.amazonaws.com/imagen3.jpg');
 }
 #hero .carousel-item::before {
   content: "";

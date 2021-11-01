@@ -69,10 +69,27 @@ export default {
         if (data && data.httpStatus === 200) {
           this.value = true;
           this.$router.push('/');
+           this.$notify({
+           group: 'all',
+           type: 'success',
+           text: 'El correo fue confirmado exitosamente. Ingresa nuevamente porfavor',
+          });          
+          this.$store.commit('cartStore/resetOrders');
+          this.$store.commit('shippingStore/resetAddresses');
+          this.$router.push('/login?previousPath=%2F');            
         } else {
           this.value = false;
         }
       } catch (err) {
+        this.$router.push('/');  
+        this.$notify({
+           group: 'all',
+           type: 'success',
+           text: 'Parece que ya confirmaste tu correo. Ingresa nuevamente porfavor',
+          });          
+          this.$store.commit('cartStore/resetOrders');
+          this.$store.commit('shippingStore/resetAddresses');
+          this.$router.push('/login?previousPath=%2F');                
         console.log(err);
       }
     }

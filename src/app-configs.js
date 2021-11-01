@@ -1,3 +1,3 @@
 export default {
-  analyticsId: 'UA-157968226-3'
+  analyticsId: 'G-SEC5LTTMC7'
 };

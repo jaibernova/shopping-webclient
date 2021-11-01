@@ -11,7 +11,7 @@
             </div>
           </b-col>
           <b-col>
-            <div class="align-right">
+            <div class="align-left">
               <div>
                 <!-- Status goes here -->
               Status:

@@ -1,7 +1,7 @@
 <template>
   <div id="shipping-detail" class="align-left">
     <br>
-    <h4>Plazo de entrega estimado</h4>
+    <h4>Cuando quisieras recibir el producto?</h4>
     <hr>
     <div v-if="isSessionActive">
       <b-form-group>

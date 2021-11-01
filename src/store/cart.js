@@ -35,12 +35,12 @@ export default {
 
       if (data.httpStatus === 200) {
         const paymentId = data.responseData.payment_info[0].payment_id;
-
+        const paymentSource = data.responseData.payment_info[0].source;
         const newData = await Vue.prototype.$axios({
           url: ProxyUrl.completeCheckout,
           method: 'post',
           data: {
-            paymentSource: 'NONE',
+            paymentSource,
             paymentId
           }
         });
