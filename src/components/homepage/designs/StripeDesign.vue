@@ -30,9 +30,9 @@
               
               <span
                 :class="{'underline': product.marked_price && product.marked_price.amount > 0}" style="color: red"
-              >$ {{product.marked_price.amount}} </span>                
+              >$ {{product.marked_price.amount.toLocaleString("de-DE")}} </span>                
               <span
-              > $ {{product.price.amount}}</span>
+              > $ {{product.price.amount.toLocaleString("de-DE")}}</span>
             
             </h5>
 
@@ -59,9 +59,9 @@
               <strong>
               <span
                 :class="{'underline': product.marked_price && product.marked_price.amount > 0}" style="color: red"
-              >$ {{product.marked_price.amount}} </span>                
+              >$ {{product.marked_price.amount.toLocaleString("de-DE")}} </span>                
               <span
-              >$ {{product.price.amount}}</span>
+              >$ {{product.price.amount.toLocaleString("de-DE")}}</span>
               </strong>
             </p>
 

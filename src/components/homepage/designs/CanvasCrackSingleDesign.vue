@@ -12,7 +12,7 @@
               <div class="body-content">
                 <span class="brand">{{product.brand}}</span>
                 <span class="name">{{product.name}}</span>
-                <span class="amount">$ {{product.price.amount}}</span>
+                <span class="amount">$ {{product.price.amount.toLocaleString("de-DE")}}</span>
 
                 <b-button class="primary-button" @click="$emit('shop', product)">Ver producto</b-button>
               </div>
@@ -38,7 +38,7 @@
           <div class="description d-flex flex-column justify-content-center align-items-center">
             <span class="brand">{{product.brand}}</span>
             <span class="name">{{product.name}}</span>
-            <span class="amount">$ {{product.price.amount}}</span>
+            <span class="amount">$ {{product.price.amount.toLocaleString("de-DE")}}</span>
 
             <span class="button-like" @click="$emit('shop', product)">Ver producto</span>
           </div>

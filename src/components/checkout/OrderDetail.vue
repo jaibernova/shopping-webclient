@@ -35,7 +35,7 @@
             </b-col>
             <b-col
               class="align-right"
-            >$ {{item ? item.aggregatedPrice.amount : ''}}</b-col>
+            >$ {{item ? item.aggregatedPrice.amount.toLocaleString("de-DE") : ''}}</b-col>
           </b-row>
         </li>
       </ul>
@@ -57,7 +57,7 @@
         <b-col cols="6" class="align-right">
           <strong>Sub Total</strong>
         </b-col>
-        <b-col class="align-right">$ {{parseFloat(subtotal.amount)}}</b-col>
+        <b-col class="align-right">$ {{(subtotal.amount.toLocaleString("de-DE"))}}</b-col>
       </b-row>
 
       <b-row v-if="shippingPrice">
@@ -67,7 +67,7 @@
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(shippingPrice.amount)}}</b-col>
+        >$ {{(shippingPrice.amount.toLocaleString("de-DE"))}}</b-col>
       </b-row>
 
       <b-row v-if="serviceCharge">
@@ -77,7 +77,7 @@
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(serviceCharge.amount)}}</b-col>
+        >$ {{(serviceCharge.amount)}}</b-col>
       </b-row>
 
 
@@ -89,7 +89,7 @@
         </b-col>
         <b-col
           class="align-right"
-        >$ {{parseFloat(tariffPrice.amount)}}</b-col>
+        >$ {{(tariffPrice.amount.toLocaleString("de-DE"))}}</b-col>
       </b-row>
 
       <br>
@@ -99,7 +99,7 @@
           <strong>Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>$ {{parseFloat(cartTotal.amount)}}</strong>
+          <strong>$ {{(cartTotal.amount.toLocaleString("de-DE"))}}</strong>
         </b-col>
       </b-row>
     </div>

@@ -8,7 +8,7 @@
               <div class="body-content">
                 <span class="brand">{{product.brand}}</span>
                 <span class="name">{{product.name}}</span>
-                <span class="amount">$ {{product.price.amount}}</span>
+                <span class="amount">$ {{product.price.amount.toLocaleString("de-DE")}}</span>
 
                 <b-button class="primary-button" @click="gotoProduct()">Ver producto</b-button>
               </div>
@@ -32,7 +32,7 @@
               <div class="body-content">
                 <span class="brand">{{product.brand}}</span>
                 <span class="name">{{product.name}}</span>
-                <span class="amount">$ {{product.price.amount}}</span>
+                <span class="amount">$ {{product.price.amount.toLocaleString("de-DE")}}</span>
 
                 <b-button class="primary-button" @click="gotoProduct()">Ver producto</b-button>
               </div>

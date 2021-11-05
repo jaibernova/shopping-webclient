@@ -39,11 +39,11 @@
                     <strong
                       class="underline"
                       style="color: red"
-                    >$ {{product.marked_price.amount}}</strong>&nbsp;&nbsp;
+                    >$ {{product.marked_price.amount.toLocaleString("de-DE")}}</strong>&nbsp;&nbsp;
                   </span>
 
                   <strong>
-                    <span>$ {{product.price.amount}}</span>
+                    <span>$ {{product.price.amount.toLocaleString("de-DE")}}</span>
                   </strong>
                 </p>
               </div>

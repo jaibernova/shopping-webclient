@@ -5,7 +5,7 @@
     <h3>{{product.name}}</h3>
     <h6>Por {{product.store}}</h6>
 
-    <h4>$ {{product.price.amount}}</h4>
+    <h4>$ {{product.price.amount.toLocaleString("de-DE")}}</h4>
     <div class="custom-attributes">
       <div v-for="(attrib, aid) in customizations" v-bind:key="aid">
         <div v-if="attrib.type === 'Array'">

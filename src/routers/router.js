@@ -23,8 +23,8 @@ const router = new Router({
           component: MainPage,
         },
         {
-          path: 'about',
-          name: 'about',
+          path: 'terms',
+          name: 'terms',
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.
@@ -36,8 +36,8 @@ const router = new Router({
           component: () => import('@/views/SearchView.vue'),
         },
         {
-          path: 'faqs',
-          name: 'faqs',
+          path: 'privacy',
+          name: 'privacy',
           // route level code-splitting
           // this generates a separate chunk (about.[hash].js) for this route
           // which is lazy-loaded when the route is visited.

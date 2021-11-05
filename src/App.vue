@@ -19,6 +19,7 @@
     <a href="https://api.whatsapp.com/send?phone=+573174081631&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20producto" class="float" target="_blank">
       <i class="fa fa-whatsapp my-float"></i>
     </a>
+
     <router-view/>
   </div>
 </template>
@@ -186,8 +187,8 @@ body {
 	position:fixed;
 	width:60px;
 	height:60px;
-	bottom:40px;
-	right:40px;
+	bottom:80px;
+	right:19px;
 	background-color:#25d366;
 	color:#FFF;
 	border-radius:50px;

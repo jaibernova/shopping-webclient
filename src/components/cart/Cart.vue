@@ -66,7 +66,7 @@
           <strong>Sub Total</strong>
         </b-col>
         <b-col class="align-right">
-          <strong>$ {{parseFloat(subtotal.amount).toFixed(0)}}</strong>
+          <strong>$ {{(subtotal.amount.toLocaleString("de-DE"))}}</strong>
         </b-col>
       </b-row>
       <br>

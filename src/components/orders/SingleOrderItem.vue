@@ -25,7 +25,7 @@
             <br>
 
             <div class="info">
-              <strong>$ {{item.aggregatedPrice.amount}}</strong><br>
+              <strong>$ {{item.aggregatedPrice.amount.toLocaleString("de-DE")}}</strong><br>
               <span class="info">Tipo: </span>&nbsp;&nbsp;
               <strong>{{item.product.store}}</strong>
               <p>

@@ -22,9 +22,9 @@
       <div class="main-block">
         <b-row>
           <b-col class="align-left center-sm" md="4">
-            <a>Politica de privacidad</a>
+            <a href="/#/privacy">Politica de privacidad</a>
             <br>
-            <a>Terminos y condiciones de uso</a>
+            <a href="/#/terms">Terminos y condiciones de uso</a>
           </b-col>
           <b-col md="4">
             <div>
@@ -37,7 +37,7 @@
           <b-col class="align-right center-sm" md="4">
             <a>Facebook</a>
             <br>
-            <a>Instagram</a>
+            <a href="https://www.instagram.com/luka.petshop2021/">Instagram</a>
           </b-col>
         </b-row>
       </div>

@@ -28,11 +28,11 @@
           </template>
           <div class="card-text card-font">
             <p>Peso total: <strong>{{order.cart.totalWeight.quantity}} {{order.cart.totalWeight.unit}}</strong></p>
-            <p>Sub Total: <strong>$ {{order.cart.subTotalPrice.amount}}</strong></p>
-            <p>Cargo adicional: <strong>$ {{order.cart.serviceCharge.amount}}</strong></p>
-            <p>Costo de envio: <strong>$ {{order.cart.shippingPrice.amount}}</strong></p>
-            <p>Tarifa: <strong>$ {{order.cart.tariffPrice.amount}}</strong></p>
-            <p>Precio total: <strong>$ {{order.cart.totalPrice.amount}}</strong></p>
+            <p>Sub Total: <strong>$ {{order.cart.subTotalPrice.amount.toLocaleString("de-DE")}}</strong></p>
+            <p>Cargo adicional: <strong>$ {{order.cart.serviceCharge.amount.toLocaleString("de-DE")}}</strong></p>
+            <p>Costo de envio: <strong>$ {{order.cart.shippingPrice.amount.toLocaleString("de-DE")}}</strong></p>
+            <p>Tarifa: <strong>$ {{order.cart.tariffPrice.amount.toLocaleString("de-DE")}}</strong></p>
+            <p>Precio total: <strong>$ {{order.cart.totalPrice.amount.toLocaleString("de-DE")}}</strong></p>
           </div>
         </b-card>
 
