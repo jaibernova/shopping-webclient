@@ -2,13 +2,13 @@
   <div class="order-detail align-left">
     <form
       method="post"      
-      action="https://sandbox.checkout.payulatam.com/ppp-web-gateway-payu/"
+      action="https://checkout.payulatam.com/ppp-web-gateway-payu/"
       
       
     >
-      <input name="merchantId" type="hidden" value="508029" />
-      <input name="accountId" type="hidden" value="512321" />
-      <input name="description" type="hidden" :value="checksname" />
+      <input name="merchantId" type="hidden" value="953724" />
+      <input name="accountId" type="hidden" value="961367" />
+      <input name="description" type="hidden" value="Compra en Luka Petshop" />
       <input name="referenceCode" type="hidden" :value="checksname">
       <input name="amount" type="hidden"  v-model="cartTotal.amount"/>
       <!-- v-model="cartTotal.amount" -->
@@ -20,7 +20,7 @@
         type="hidden"
         :value="keysname"
       />
-      <input name="test" type="hidden" value="1" />
+      <input name="test" type="hidden" value="0" />
       <input name="buyerEmail" type="hidden" :value="emailname"/>
       <!-- v-model="email.amount" -->
       <input
@@ -160,7 +160,7 @@ export default {
         let referencia = this.$store.getters['cartStore/checkoutId']
         
 
-        const hash = CryptoJS.MD5('4Vj8eK4rloUd272L48hsrarnUA'+'~'+'508029'+'~'+referencia+'~'+total+'~'+'COP')
+        const hash = CryptoJS.MD5('UDKOU0Hmmb5yUT1xz1y7yRjr0D'+'~'+'953724'+'~'+referencia+'~'+total+'~'+'COP')
       return hash;
     },    
   },

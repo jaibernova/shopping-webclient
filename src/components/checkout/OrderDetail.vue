@@ -43,6 +43,12 @@
 
     <div class="total-line" v-if="orders && orders.length > 0">
       <b-row>
+        <strong>Si estas desde tu celular, al presionar "Obtener el precio final" el boton de pago aparecera bajo la direccion de envio, es decir, arriba.</strong>
+      </b-row>
+      <b-row>
+        <p></p>
+      </b-row>
+      <b-row>
         <!-- <hr> -->
         <b-col cols="6" class="align-right">
           <strong>Peso total</strong>

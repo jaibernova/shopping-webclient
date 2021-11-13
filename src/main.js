@@ -6,6 +6,7 @@ import { fas } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 
 import BootstrapVue from 'bootstrap-vue';
+
 import store from './store/store';
 import router from './routers/router';
 import App from './App.vue';

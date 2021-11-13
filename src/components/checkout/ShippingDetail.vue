@@ -109,7 +109,7 @@
             name="address2"
             size="sm"
             v-model="shippingDeet.addressLine2"
-            placeholder="Casa, conjunto, bloque, etc..."
+            placeholder="Rango de horas preferidas para recibir el pedido, casa, conjunto, bloque, etc..."
           ></b-form-input>
         </b-form-group>
 
@@ -160,16 +160,17 @@
           <b-col>
             <b-form-group>
               <label for="state">Localidad:</label>
-              <b-form-input
+              <b-form-select
                 id="state"
                 type="text"
                 name="state"
                 size="sm"
+                :options="localidadOptions"                  
                 :state="stateState"
                 v-model="shippingDeet.state"
                 placeholder="Ingresa tu localidad"
                 aria-describedby="stateFeedback"
-              ></b-form-input>
+              ></b-form-select>
               <b-form-invalid-feedback id="stateFeedback">
                 <!-- This will only be shown if the preceeding input has an invalid state -->
                 POrfavor ingresa la localidad.
@@ -247,7 +248,8 @@ export default {
       description: '',
       isUpdate: false,
       countryOptions: ['Colombia'],
-      cityOptions: ['Bogota']
+      cityOptions: ['Bogota'],
+      localidadOptions: ['Suba', 'Usaquen', 'Engativa']
     };
   },
 

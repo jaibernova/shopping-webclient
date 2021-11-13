@@ -41,13 +41,12 @@
                     <div class="carousel-item2 active" >
                       <div class="carousel-container">
                         <div class="carousel-content container">
-                          <h2 class="animate__animated animate__fadeInDown">¿Tienes dudas?</h2>
-                          <p class="animate__animated animate__fadeInUp">Haz click en el logo de whatsapp que se encuentra en la parte inferior derecha de la pagina. Te responderemos al instante </p>
+                          <h2 class="animate__animated animate__fadeInDown">Descarga nuestra aplicacion</h2>
+                          <p class="animate__animated animate__fadeInUp">Ya disponible para dispositivos Android </p>
 
-                            <a href="https://api.whatsapp.com/send?phone=+573174081631&text=Hola%21%20Quisiera%20m%C3%A1s%20informaci%C3%B3n%20sobre%20este%20producto" target=”_blank” class="btn-get-started animate__animated animate__fadeInUp scrollto">Whatsapp</a>
+                            <a href="https://play.google.com/store/apps/details?id=com.lukapetshop.myapp"   class="btn-get-started animate__animated animate__fadeInUp scrollto">Descargar</a>                            
 
-                            
-
+ 
                         </div>
                       </div>
                     </div>
@@ -67,7 +66,7 @@
                     <div class="carousel-item3 active" >
                       <div class="carousel-container">
                         <div class="carousel-content container">
-                          <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $130.000</h2>
+                          <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $150.000</h2>
                           <p class="animate__animated animate__fadeInUp">Agrega tus productos al carrito y selecciona el tiempo de entrega que prefieras</p>
                                                  
                             <a href="#/login?previousPath=%2F"   class="btn-get-started animate__animated animate__fadeInUp scrollto">Registrate</a>
@@ -124,7 +123,7 @@
   background-repeat: no-repeat;
   overflow: hidden;
   // background-image: url('https://enricgomez.b-cdn.net/wp-content/uploads/2020/10/portada-insatgram.jpg.webp');
-  background-image: url('https://image.freepik.com/foto-gratis/mujer-mostrando-icono-whatsapp-messenger_53876-41312.jpg');
+  background-image: url('https://www.movilzona.es/app/uploads-movilzona.es/2017/10/Play-Store.jpg');
 }
 #hero .carousel-item3 {
   width: 100%;

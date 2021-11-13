@@ -24,19 +24,14 @@ export default {
     return {
       products: [
         {
-          name: 'Max',
-          price: 'Feliz con su Chunky',
-          url: 'https://www.minuto30.com/wp-content/uploads/2018/07/perro-pitbull-3.jpg',
-        },
-        {
-          name: 'Lulu',
+          name: 'Lucas',
           price: 'Solo come su Dog Chow',
           url: 'https://files.rcnradio.com/public/styles/image_834x569/public/2018-09/perro_0.jpg?itok=_NyGzhmE',
         },
         {
           name: 'Trixie',
           price: 'Le gusta mucho su Cat Show',
-          url: 'https://www.avisos-colombia.com/uimages/colombia/12/37/5512/1.jpg',
+          url: 'https://tiendaproyecto2021-dev.s3.amazonaws.com/Lorenzo-gato-en-adopcion-en-Madrid-01a.jpg',
         },
         {
           name: 'Tommy y Coco',
@@ -53,6 +48,11 @@ export default {
           price: 'Un bulto no le dura todo el mes',
           url: 'https://de10.com.mx/sites/default/files/styles/imagen_body/public/2020/02/10/bosque_aragon_parque_canino.jpg?itok=XVIyatms',
         },
+        {
+          name: 'Lulu',
+          price: 'Feliz con su Chunky',
+          url: 'https://tiendaproyecto2021-dev.s3.amazonaws.com/IMG-20210506-WA0001.jpg',
+        },        
       ],
     };
   },
