@@ -218,9 +218,10 @@ export default {
   border-radius: 0px;
   margin: 20px 20px 30px 0px;
   width: 225px;
-
+  // box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  // padding: 30px;
   // &:hover .img-cls {
-  //   transform: scale(1.2);
+  //   transform: scale(1.1);
   //   transition: all 0.5s;
   // }
 
@@ -232,6 +233,7 @@ export default {
 
   .product-card-desc {
     margin-top: 0.5em;
+    
     .title {
       height: 2em;
       text-overflow: ellipsis;

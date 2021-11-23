@@ -1,24 +1,102 @@
 <template>
   <div id="main-page">
     <!-- <div class="main-bg"></div> -->
+    <br />
+    <br />
+    <br />
+    <br />
+    <div id="banner-inferior">
+      <h5>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="22"
+          height="22"
+          fill="currentColor"
+          class="bi bi-truck"
+          viewBox="0 0 16 18"
+        >
+          <path
+            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+          />
+        </svg>
+        Envios gratis por compras superiores a $150.000
+      </h5>
+    </div>
+    <div class="col-lg-6 d-block d-md-none d-none" id="banner-inferior2" >
+      <h7>
+        <br/>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="18"
+          height="18"
+          fill="currentColor"
+          class="bi bi-truck"
+          viewBox="0 0 16 18"
+        >
+          <path
+            d="M0 3.5A1.5 1.5 0 0 1 1.5 2h9A1.5 1.5 0 0 1 12 3.5V5h1.02a1.5 1.5 0 0 1 1.17.563l1.481 1.85a1.5 1.5 0 0 1 .329.938V10.5a1.5 1.5 0 0 1-1.5 1.5H14a2 2 0 1 1-4 0H5a2 2 0 1 1-3.998-.085A1.5 1.5 0 0 1 0 10.5v-7zm1.294 7.456A1.999 1.999 0 0 1 4.732 11h5.536a2.01 2.01 0 0 1 .732-.732V3.5a.5.5 0 0 0-.5-.5h-9a.5.5 0 0 0-.5.5v7a.5.5 0 0 0 .294.456zM12 10a2 2 0 0 1 1.732 1h.768a.5.5 0 0 0 .5-.5V8.35a.5.5 0 0 0-.11-.312l-1.48-1.85A.5.5 0 0 0 13.02 6H12v4zm-9 1a1 1 0 1 0 0 2 1 1 0 0 0 0-2zm9 0a1 1 0 1 0 0 2 1 1 0 0 0 0-2z"
+          />
+        </svg>
+        Envios gratis por compras superiores a $150.000
+      </h7>
+    </div>
+
     <div>
       <carousel />
     </div>
     <br />
     <br />
     <div>
-      <br />
       <div class="section-title">
-        <h2>Mas vendidos</h2>
+        <h2>Categorias</h2>
       </div>
-
-      <br />
     </div>
+    <div>
+      <!-- ======= Values Section ======= -->
+      <section id="values" class="values">
+        <div class="">
+          <div class="row">
+            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+              <a id="link" href="/#/search?category=Perro">
+                <div class="box">
+                  <h3>Perritos</h3>
+                  <br />
+                  <img
+                    src="@/assets/images/cachorro.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+            <div
+              class="col-lg-6 mt-6 mt-lg-0"
+              data-aos="fade-up"
+              data-aos-delay="400"
+            >
+              <a id="link" href="/#/search?category=Gato">
+                <div class="box">
+                  <h3>Gaticos</h3>
+                  <br />
+                  <img
+                    src="@/assets/images/gatito.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                  <br />
+                </div>
+              </a>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- End Values Section -->
+    </div>
+    <br />
 
     <div v-for="(design, did) in featuredDesigns" :key="did" class="designs">
       <design-entry :design="design" @shop="gotoProduct" />
     </div>
-    <br />
     <br />
     <div class="section-title">
       <h2>¿Porque escogernos?</h2>
@@ -118,6 +196,7 @@
     <br />
     <br />
     <br />
+
     <div class="section-title">
       <h2>Clientes felices</h2>
     </div>
@@ -126,15 +205,15 @@
     <featured-stripe />
     <br />
     <br />
-    <br/>
-    <br/>
+    <br />
+    <br />
+
     <div class="section-title">
       <h2>Preguntas frecuentes</h2>
     </div>
 
-    
     <div>
-    <faq />
+      <faq />
     </div>
   </div>
 </template>
@@ -185,6 +264,13 @@ export default {
 
 <style lang="scss">
 @import '../../assets/css/global.scss';
+#banner-inferior2 {
+  background-color: rgb(15, 15, 13);
+  margin-top: 0%;
+  color: white;
+  height: 50px;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
 
 .designs {
   margin-bottom: 1rem;
@@ -232,7 +318,6 @@ export default {
   font-family: 'Quicksand';
 }
 
-
 #why-us .box {
   padding: 50px 30px;
   box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.1);
@@ -271,7 +356,7 @@ export default {
 
 .section-title {
   text-align: center;
-  padding-bottom: 30px;
+  padding-bottom: 25px;
 }
 .section-title h2 {
   font-size: 35px;
@@ -305,4 +390,49 @@ export default {
 .section-title p {
   margin-bottom: 0;
 }
+
+/*--------------------------------------------------------------
+# Values
+--------------------------------------------------------------*/
+.values .box {
+  padding: 30px;
+  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  text-align: center;
+
+  transition: 0.3s;
+  height: 100%;
+}
+.values .box img {
+  // padding: 30px 50px;
+  transition: 0.5s;
+  transform: scale(1.1);
+}
+.values .box h3 {
+  font-size: 24px;
+  color: #012970;
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.values .box:hover {
+  box-shadow: 0px 0 30px rgba(1, 41, 112, 0.08);
+}
+.values .box:hover img {
+  transform: scale(1);
+}
+
+#link {
+  text-decoration: none;
+}
+
+#banner-inferior {
+  background-color: rgb(15, 15, 13);
+  color: white;
+  box-shadow: 0px 0 5px rgba(10, 23, 44, 0.08);
+  margin: 0%;
+  padding: 0%;
+  height: 25px;
+  font-weight: 50;
+  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
 </style>

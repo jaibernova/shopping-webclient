@@ -1,13 +1,19 @@
 <template>
   <div id="header-menu">
+
     <b-navbar
       toggleable="md"
+      id="topnavbar"
       fixed="top"
       class="header-color header-width"
       type="light"
       :style="headerStyle"
     >
-      <button target="nav_collapse" @click="burgerClick()" class="d-sm-block d-md-none burger">
+      <button
+        target="nav_collapse"
+        @click="burgerClick()"
+        class="d-sm-block d-md-none burger"
+      >
         <span class="navbar-toggler-icon"></span>
       </button>
 
@@ -16,13 +22,16 @@
           src="@/assets/logo_transparent_blue_black.png"
           alt="VENIQA"
           width="125px"
-          style="padding: 0.5rem 0rem;"
-        >
+          style="padding: 0.5rem 0rem"
+        />
       </b-navbar-brand>
 
-      <b-nav-item class="d-xs-block d-sm-block d-md-none" @click="$emit('openCart')">
-        <font-awesome-icon icon="shopping-cart" style="font-size: 1.2em"/>
-        <b-badge :pill="true" variant="danger">{{totalOrders}}</b-badge>
+      <b-nav-item
+        class="d-xs-block d-sm-block d-md-none"
+        @click="$emit('openCart')"
+      >
+        <font-awesome-icon icon="shopping-cart" style="font-size: 1.2em" />
+        <b-badge :pill="true" variant="danger">{{ totalOrders }}</b-badge>
       </b-nav-item>
 
       <div class="mobile-search-bar d-xs-block d-sm-block d-md-none">
@@ -34,7 +43,7 @@
           style="width: 100%"
           @keyup.enter="searchProduct()"
           @keydown.esc="showSearch = false"
-        >
+        />
       </div>
 
       <transition
@@ -57,9 +66,13 @@
                 v-model="searchTerm"
                 @keyup.enter="searchProduct()"
                 @keydown.esc="showSearch = false"
-              >
+              />
             </transition>
-            <div class="veniqa-nav d-none d-md-block" v-if="!showSearch" style="margin-top: 0.5rem">
+            <div
+              class="veniqa-nav d-none d-md-block"
+              v-if="!showSearch"
+              style="margin-top: 0.5rem"
+            >
               <font-awesome-icon
                 @click="showSearch = true"
                 style="color: rgba(0, 0, 0, 0.5)"
@@ -68,14 +81,23 @@
               />
             </div>
 
-            <b-nav-item @click="openCategory('Perro')" class="veniqa-nav d-none d-md-block">Perros</b-nav-item>
-            <b-nav-item @click="openCategory('Gato')" class="veniqa-nav d-none d-md-block">Gatos</b-nav-item>
+            <b-nav-item
+              @click="openCategory('Perro')"
+              class="veniqa-nav d-none d-md-block"
+              >Perros</b-nav-item
+            >
+            <b-nav-item
+              @click="openCategory('Gato')"
+              class="veniqa-nav d-none d-md-block"
+              >Gatos</b-nav-item
+            >
 
             <b-nav-item
               class="veniqa-nav d-none d-md-block"
               to="/login"
               v-if="!isSessionActive"
-            >Inicia sesion o registrate</b-nav-item>
+              >Inicia sesion o registrate</b-nav-item
+            >
 
             <b-nav-item-dropdown
               class="veniqa-nav d-none d-md-block"
@@ -84,20 +106,30 @@
               v-else
             >
               <!-- <b-dropdown-item href="#">Perfil</b-dropdown-item> -->
-              <b-dropdown-item v-if="isSessionActive" to="/orders">Pedidos</b-dropdown-item>
-              <b-dropdown-item @click="logoutClicked()">Cerrar sesion</b-dropdown-item>
+              <b-dropdown-item v-if="isSessionActive" to="/orders"
+                >Pedidos</b-dropdown-item
+              >
+              <b-dropdown-item @click="logoutClicked()"
+                >Cerrar sesion</b-dropdown-item
+              >
             </b-nav-item-dropdown>
             <!-- </b-nav-item> -->
             <!-- <b-nav-item class="veniqa-nav d-none d-md-block" to="/checkout"> -->
-            <b-nav-item class="veniqa-nav d-none d-md-block" @click="$emit('openCart')">
-              <font-awesome-icon icon="shopping-cart" style="font-size: 1.2em"/>
-              <b-badge :pill="true" variant="danger">{{totalOrders}}</b-badge>
+            <b-nav-item
+              class="veniqa-nav d-none d-md-block"
+              @click="$emit('openCart')"
+            >
+              <font-awesome-icon
+                icon="shopping-cart"
+                style="font-size: 1.2em"
+              />
+              <b-badge :pill="true" variant="danger">{{ totalOrders }}</b-badge>
             </b-nav-item>
           </b-navbar-nav>
 
           <!-- Displays only when collapsible option is true -->
           <div class="sidenav ml-auto d-md-none">
-            <left-menu-view/>
+            <left-menu-view />
             <!-- <div class="align-right close-icon">
               <font-awesome-icon v-b-toggle.nav_collapse icon="times"/>
             </div>
@@ -123,7 +155,9 @@
           <!-- End of Collapsible view display -->
         </b-collapse>
       </transition>
+
     </b-navbar>
+
   </div>
 </template>
 
@@ -343,4 +377,6 @@ export default {
     }
   }
 }
+
+
 </style>
