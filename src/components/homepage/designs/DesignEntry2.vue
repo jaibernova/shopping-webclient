@@ -1,13 +1,8 @@
 <template>
   <div id="design-entry">
     <!-- This previews design specific to the type of the design we have  -->
-    <div v-if="design && design.config.design_type === 'Canvas Left Cracked'">
-      <canvas-crack-single
-        :product="design.products[0]"
-        :fecha="design.config.name"
-        :type="2"
-        @shop="shop"
-      />
+    <div v-if="design && design.config.design_type === 'Stripe'">
+      <stripe-design :products="design.products" @shop="shop" />
     </div>
   </div>
 </template>

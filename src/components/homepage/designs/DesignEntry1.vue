@@ -1,20 +1,20 @@
 <template>
   <div id="design-entry">
     <!-- This previews design specific to the type of the design we have  -->
-    <div v-if="design && design.config.design_type === 'Canvas Left Cracked'">
-      <canvas-crack-single
+    <div v-if="design && design.config.design_type === 'Canvas Right Cracked'">     
+      <canvas-crack-single-1
         :product="design.products[0]"
         :fecha="design.config.name"
-        :type="2"
+        :type="1"
         @shop="shop"
-      />
+      />     
     </div>
-  </div>
+  </div>  
 </template>
 
 <script>
 import StripeDesign from './StripeDesign.vue';
-import CanvasCrackSingle from './CanvasCrackSingleDesign.vue';
+import CanvasCrackSingle1 from './CanvasCrackSingleDesign1.vue';
 
 export default {
   props: {
@@ -25,7 +25,7 @@ export default {
   },
   components: {
     StripeDesign,
-    CanvasCrackSingle,
+    CanvasCrackSingle1,
   },
 
   methods: {

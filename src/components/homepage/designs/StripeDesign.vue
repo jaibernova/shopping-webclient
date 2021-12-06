@@ -1,5 +1,8 @@
 <template>
+<div>
+
   <b-jumbotron>
+    
     <div class="d-none d-md-block">
       <b-row class="d-flex flex-row justify-content-center align-items-center">
         <b-col
@@ -46,7 +49,7 @@
 
     <!-- Design for mobile view -->
     <div class="d-block d-md-none d-none" style="background: white">
-      <div class="product-card align-left" v-for="(product, key) in products" v-bind:key="key">
+      <div class="product-card align-center " v-for="(product, key) in products" v-bind:key="key">
         <div class="link" @click="openProductDetail(product._id)">
           <div class="img-parent" v-if="product.detailedImageUrls.length > 0">
             <img class="img-cls-featured" :src="product.detailedImageUrls[0]">
@@ -72,6 +75,7 @@
       </div>
     </div>
   </b-jumbotron>
+</div>  
 </template>
 
 <script>
@@ -96,6 +100,7 @@ export default {
   height: 75vh;
   padding: 0px 0px 0px 0px !important;
   margin: 0px 0px 0px 0px !important;
+
 }
 
 h4,
@@ -123,11 +128,14 @@ h5 {
   // background-color: white;
   border-radius: 0px;
   margin: 20px 20px 30px 0px;
-  width: 225px;
+  width: 50%;
+  // font-size: 13px;
+
+ 
 
   .img-parent {
-    height: 300px;
-    width: 225px;
+    height: 250px;
+    width: 220px;
     overflow: hidden;
   }
 
@@ -176,4 +184,6 @@ h5 {
 .jumbrotron {
   background-color: white;
 }
+
+
 </style>

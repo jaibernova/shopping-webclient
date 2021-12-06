@@ -54,7 +54,7 @@
     <div>
       <!-- ======= Values Section ======= -->
       <section id="values" class="values">
-        <div class="">
+        <div class="container1">
           <div class="row">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <a id="link" href="/#/search?category=Perro">
@@ -93,11 +93,31 @@
       <!-- End Values Section -->
     </div>
     <br />
-
+    <div class="section-title">
+      <h2>Por tiempo limitado</h2>
+    </div>
     <div v-for="(design, did) in featuredDesigns" :key="did" class="designs">
       <design-entry :design="design" @shop="gotoProduct" />
     </div>
-    <br />
+    <div class="section-title">
+      <h2>Combos</h2>
+    </div>
+     
+      
+            
+    <div v-for="(design, did) in featuredDesigns" :key="did" class="col-lg-12">
+      <design-entry1 :design="design" @shop="gotoProduct" />     
+
+    </div> 
+    <br/>
+    <div class="section-title">
+      <h2>Mas vendidos</h2>
+    </div>
+    <div v-for="(design, did) in featuredDesigns" :key="did" class="designs">
+      <design-entry2 :design="design" @shop="gotoProduct" />
+    </div>        
+    <br/>
+    <br/>
     <div class="section-title">
       <h2>¿Porque escogernos?</h2>
     </div>
@@ -225,12 +245,16 @@ import Product from '@/data/featuredProduct.json';
 import FeatureService from '@/services/FeaturedService';
 import FeaturedStripe from '@/components/homepage/FeaturedStripe.vue';
 import DesignEntry from '@/components/homepage/designs/DesignEntry.vue';
+import DesignEntry1 from '@/components/homepage/designs/DesignEntry1.vue';
+import DesignEntry2 from '@/components/homepage/designs/DesignEntry2.vue';
 
 export default {
   name: 'MainPage',
   components: {
     FeaturedStripe,
     DesignEntry,
+    DesignEntry1,
+    DesignEntry2,
     Carousel,
     Faq,
   },
@@ -273,7 +297,7 @@ export default {
 }
 
 .designs {
-  margin-bottom: 1rem;
+  margin-bottom: 0.50rem;
 }
 .veniqa-button:hover {
   background-color: $pitch-black;
@@ -434,5 +458,6 @@ export default {
   font-weight: 50;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
+
 
 </style>

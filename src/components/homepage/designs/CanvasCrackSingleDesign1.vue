@@ -29,71 +29,69 @@
 
     <!-- Deal Of The Week Section Begin-->
 
-
     <div class="deal-of-week">
-      <div class="container1">
-        <div class="row">
-          <div class="col-lg-6 d-none d-md-block">
-           <a id="boton-deal3">Destacado</a>
-            <div :style="productImageStyle" class="product-img"></div>
-          </div>
+        <div class="container1">
+            <div class="row">
+                <div class="col-lg-6">
+                    <div class="section-title">
+                        <h2 class="product-price">
+                            {{ product.name }}
+                        </h2>
+                         <!-- <div>
+                          <span> {{ product.brand }}</span>
+                        </div> -->
+                        <div class="d-block d-md-none d-none">
+                            <div>
+                                <img
+                                class="img-cls-featured"
+                                :src="product.detailedImageUrls[0]"
+                                alt="chunky cordero salmon"
+                                />
+                            </div>
+                        </div>
+                        <br />
+                        <div class="product-price">
+                            <a style="text-decoration: line-through">
+                                Antes: $
+                                {{ product.marked_price.amount.toLocaleString('de-DE') }}
+                            </a>
+                        </div>
+                        <div class="product-price2">
+                            Ahora: $ {{ product.price.amount.toLocaleString('de-DE') }}
+                        </div>
+                    </div>
+                        <Countdown :date="end" @onFinish="finish()"></Countdown>
+                        <!-- <div class="countdown-timer" id="countdown"> -->
+                            <!-- <div class="cd-item">
+                            <span>56</span>
+                            <p>Days</p>
+                            </div>
+                            <div class="cd-item">
+                            <span>12</span>
+                                <p>Hrs</p>
+                            </div>
+                            <div class="cd-item">
+                              <span>40</span>
+                                <p>Mins</p>
+                             </div>
+                                <div class="cd-item">
+                            <span>52</span>
+                                 <p>Secs</p>
+                            </div> -->
+                        <div>
+                            <br />
+                            <br />
 
-          <div class="col-lg-6">
-            <div class="section-title">
-              <h2 class="product-price">
-                {{ product.name }}
-              </h2>
-              <!-- <div>
-                <span> {{ product.brand }}</span>
-              </div> -->
-              <div class="d-block d-md-none d-none">
-                <div>
-                  <a id="boton-deal2">Destacado</a>
-                  <img
-                    class="img-cls-featured"
-                    :src="product.detailedImageUrls[0]"
-                    alt="chunky cordero salmon"
-                  />
+                            <a @click="$emit('shop', product)" id="boton-deal"
+                            >Ver producto</a
+                            >
+                        </div>
                 </div>
-              </div>
-              <br />
-              <div class="product-price" >
-                
-               <a style="text-decoration: line-through"> Antes: $ {{product.marked_price.amount.toLocaleString("de-DE")}} </a>
-              </div>
-              <div class="product-price2">
-               Ahora: $ {{ product.price.amount.toLocaleString('de-DE') }}
-              </div>
+                <div class="col-lg-6">
+                    <div :style="productImageStyle" class="product-img"></div>
+                </div>
             </div>
-            <Countdown :date="end" @onFinish="finish()"></Countdown>
-            <!-- <div class="countdown-timer" id="countdown"> -->
-            <!-- <div class="cd-item">
-                <span>56</span>
-                <p>Days</p>
-              </div>
-              <div class="cd-item">
-                <span>12</span>
-                <p>Hrs</p>
-              </div>
-              <div class="cd-item">
-                <span>40</span>
-                <p>Mins</p>
-              </div>
-              <div class="cd-item">
-                <span>52</span>
-                <p>Secs</p>
-              </div> -->
-            <div>
-              <br />
-              <br />
-
-              <a @click="$emit('shop', product)" id="boton-deal"
-                >Ver producto</a
-              >
-            </div>
-          </div>
         </div>
-      </div>
     </div>
 
     <!-- Deal Of The Week Section End -->
@@ -135,7 +133,6 @@
         </div>
       </div>
     </div> -->
-    <br />
   </div>
 </template>
 
@@ -145,7 +142,7 @@ import Countdown from './Countdown.vue';
 
 export default {
   components: { Countdown },
-  name: 'CanvasCrackSingleDesign',
+  name: 'CanvasCrackSingleDesign1',
   props: {
     product: {
       required: true,
@@ -330,7 +327,7 @@ export default {
 -----------------------*/
 
 .deal-of-week {
-  background-color: #f8f3fd;
+  background-color: #ad00000a;
   padding-top: 40px;
   padding-bottom: 70px;
   margin-left: 15px;
@@ -384,31 +381,8 @@ export default {
   text-transform: uppercase;
   text-decoration: none;
 }
-#boton-deal2 {
-  margin-right: 0%;
-  display: inline-block;
-  font-size: 14px;
-  font-weight: 700;
-  padding: 5px 10px;
-  color: #ffffff;
-  background: #1ed145;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-#boton-deal3 {
-  margin-right: 19%;
-  display: inline-block;
-  font-size: 15px;
-  font-weight: 700;
-  padding: 5px 35px;
-  color: #ffffff;
-  background: #1ed145;
-  text-transform: uppercase;
-  text-decoration: none;
-}
-
 .container1 {
-  margin-left: 25%;
-  margin-right: 25%;
+  margin-left: 15%;
+  margin-right: 8%;
 }
 </style>
