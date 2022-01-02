@@ -34,7 +34,7 @@
       <div class="container1">
         <div class="row">
           <div class="col-lg-6 d-none d-md-block">
-           <a id="boton-deal3">Destacado</a>
+           <!-- <a id="boton-deal3">Destacado</a> -->
             <div :style="productImageStyle" class="product-img"></div>
           </div>
 

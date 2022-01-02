@@ -1,44 +1,55 @@
 <template>
   <div class="product-detail">
     <div class="space"></div>
-    <br>
-    <p class="align-left bcrumb">Comprar &nbsp; / &nbsp; {{title}}</p>
-    <br>
+    <br />
+    <p class="align-left bcrumb">Comprar &nbsp; / &nbsp; {{ title }}</p>
 
     <!-- Design for mobile view -->
     <div class="d-block d-md-none d-none">
-      <div class="d-flex flex-row justify-content-center align-items-center">
-        <div>
-          <b-dropdown
-            text="Filtra aqui por categoria"
-            block
-            variant="success"
-            class="m-md-2"
-
-            menu-class="w-100"
-          >
-           <ul v-show="Object.keys(menu).length > 0">
-             <li v-for="(product, pkey) in menu" v-bind:key="pkey">
-              <div v-if="product && product.length > 0 && shouldProductDisplay(pkey, product)">
-               <ul>
+      <img src="@/assets/images/banner.webp" width="100%" alt="compra ahora" />
+      <br />
+      <br />
+      <b-dropdown
+        text="Filtra aqui por categoria"
+        block
+        id="filtro"
+        menu-class="w-100"
+      >
+        <ul id="lista" v-show="Object.keys(menu).length > 0">
+          <li v-for="(product, pkey) in menu" v-bind:key="pkey">
+            <div
+              v-if="
+                product &&
+                product.length > 0 &&
+                shouldProductDisplay(pkey, product)
+              "
+            >
+              <ul>
                 <li v-for="(subcategory, sid) in product" v-bind:key="sid">
                   <a
                     @click="openSubCategory(subcategory, pkey)"
-                    :class="{'bold': activeSubCategory(subcategory.subcategory)}"
-                  >{{subcategory.subcategory}}</a>
+                    :class="{
+                      bold: activeSubCategory(subcategory.subcategory),
+                    }"
+                    >{{ subcategory.subcategory }}</a
+                  >
                 </li>
               </ul>
-              </div>
-            </li>
-          </ul>               
-          </b-dropdown>
-        </div>
-      </div>
+            </div>
+          </li>
+        </ul>
+      </b-dropdown>
     </div>
+    <b-col class="d-none d-lg-block">
+      <img src="@/assets/images/banner4.webp" width="100%" alt="compra ahora" />
+    </b-col>
     <b-row>
+      
       <b-col md="2" class="beginner align-left">
         <div class="d-none d-md-block">
+
           <side-menu-view
+            id="lateral"
             :sidebar="menu"
             :category="category"
             :subCategory="subCategory"
@@ -48,34 +59,57 @@
       </b-col>
       <b-col md="10">
         <div v-if="data && data.length > 0">
-          <div class="product-card align-center" v-for="(product, pid) in data" v-bind:key="pid">
+          <div
+            class="product-card align-center"
+            v-for="(product, pid) in data"
+            v-bind:key="pid"
+          >
             <div class="link" @click="openProductDetail(product._id)">
               <div class="img-parent" v-if="product.thumbnailUrls.length > 0">
-                <search-result-view-image :product="product"/>
+                <search-result-view-image :product="product" />
               </div>
 
               <p
                 v-else
-                style="font-size: 5em; padding: 10px 0px; text-align: center; color: #bdbdbd"
+                style="
+                  font-size: 5em;
+                  padding: 10px 0px;
+                  text-align: center;
+                  color: #bdbdbd;
+                "
               >
-                <font-awesome-icon icon="shopping-bag" width="100%"/>
+                <font-awesome-icon icon="shopping-bag" width="100%" />
               </p>
               <div class="product-card-desc">
-                <p class="info">{{product.store}}</p>
-                <p class="title">{{product.name}}</p>
+                <p class="info">{{ product.store }}</p>
+                <p class="title">{{ product.name }}</p>
                 <p>
                   <span
-                    v-if="product.marked_price && product.marked_price.amount > product.price.amount"
+                    v-if="
+                      product.marked_price &&
+                      product.marked_price.amount > product.price.amount
+                    "
                   >
-                    <strong
-                      class="underline"
-                      style="color: red"
-                    >$ {{product.marked_price.amount.toLocaleString("de-DE")}}</strong>&nbsp;&nbsp;
+                    <strong class="underline" style="color: red"
+                      >$
+                      {{
+                        product.marked_price.amount.toLocaleString('de-DE')
+                      }}</strong
+                    >&nbsp;&nbsp;
                   </span>
 
                   <strong>
-                    <span>$ {{product.price.amount.toLocaleString("de-DE")}}</span>
+                    <span
+                      >$
+                      {{ product.price.amount.toLocaleString('de-DE') }}</span
+                    >
                   </strong>
+                </p>
+
+                <p style="margin-top: 20px">
+                  <b-button  class="addToCart">
+                    <font-awesome-icon icon="shopping-bag" />&nbsp; Ver producto
+                  </b-button>
                 </p>
               </div>
             </div>
@@ -85,11 +119,14 @@
               class="primary-button"
               @click="loadMoreProducts()"
               v-show="data.length < paging.total"
-            >Ver mas</b-btn>
+              >Ver mas</b-btn
+            >
           </div>
         </div>
         <div v-else>
-          <div class="info" style="font-size: 50px">No se encontraron productos</div>
+          <div class="info" style="font-size: 50px">
+            No se encontraron productos
+          </div>
         </div>
       </b-col>
     </b-row>
@@ -137,7 +174,7 @@ export default {
       required: false,
       default: null,
       type: Object,
-    },  
+    },
   },
   components: {
     SearchResultViewImage,
@@ -178,8 +215,8 @@ export default {
     shouldProductDisplay(catgry, subcats) {
       if (this.category.length <= 0) {
         if (
-          this.subCategory.length > 0
-          && _.findIndex(subcats, v => v.subcategory === this.subCategory) >= 0
+          this.subCategory.length > 0 &&
+          _.findIndex(subcats, (v) => v.subcategory === this.subCategory) >= 0
         ) {
           return true;
         }
@@ -192,13 +229,89 @@ export default {
 
     activeSubCategory(subCat) {
       return subCat === this.subCategory;
-    },    
+    },
   },
-  computed: {},  
+  computed: {},
 };
 </script>
 
 <style lang="scss">
+#lateral {
+  padding: 40px;
+  margin-top: 20px;
+  color: rgb(0, 0, 0);
+  font-size: 15px;
+  font-family: inherit;
+  border-color: rgb(0, 0, 0);
+  box-shadow: 0 0.125rem 0.5rem rgba(0, 0, 0, 0.075) !important;
+}
+
+.dropdown-menu {
+  box-sizing: border-box;
+  border-color: rgb(255, 255, 255);
+  text-align: center;
+  line-height: 2;
+  font-size: 15px;
+}
+
+.btn-secondary:hover {
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  color: #603e85;
+  font-size: 13px;
+  font-family: inherit;
+  border-color: #603e85;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  
+}
+.btn-secondary {
+  margin-bottom: 20px;
+  background-color: #603e85;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-family: inherit;
+  border-color: #603e85;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  
+}
+
+.btn-secondary:not(:disabled):not(.disabled):active{
+    margin-bottom: 20px;
+  background-color: #603e85;
+  color: rgb(255, 255, 255);
+  font-size: 13px;
+  font-family: inherit;
+  border-color: #603e85;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.btn-secondary:active {
+  margin-bottom: 20px;
+  background-color: rgb(255, 255, 255);
+  color: #603e85;
+  font-size: 13px;
+  font-family: inherit;
+  border-color: #603e85;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;  
+}
+.btn-secondary:focus {
+  background-color: rgb(255, 255, 255);
+  color: #603e85;
+  font-size: 13px;
+  font-family: inherit;
+  border-color: #603e85;
+  box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+}
+.show {
+  .btn-secondary.dropdown-toggle {
+    background-color: #603e85;
+    color: rgb(255, 255, 255);
+    font-size: 13px;
+    font-family: inherit;
+    border-color: #603e85;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075) !important;
+  }
+}
+
 .search-result-view {
   text-align: left;
   width: 80%;
@@ -216,9 +329,10 @@ export default {
   // box-shadow: 3px 4px 5px 0px #ccc;
   // background-color: white;
   border-radius: 0px;
-  margin: 20px 20px 30px 0px;
-  width: 225px;
-  // box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+
+  margin: 20px 20px 30px 30px;
+  width: 255px;
+  box-shadow: 0px 0 8px rgba(1, 41, 112, 0.08);
   // padding: 30px;
   // &:hover .img-cls {
   //   transform: scale(1.1);
@@ -226,14 +340,15 @@ export default {
   // }
 
   .img-parent {
-    height: 300px;
-    width: 225px;
+    margin-top: 20px;
+    height: 280px;
+    width: 255px;
     overflow: hidden;
   }
 
   .product-card-desc {
     margin-top: 0.5em;
-    
+
     .title {
       height: 2em;
       text-overflow: ellipsis;

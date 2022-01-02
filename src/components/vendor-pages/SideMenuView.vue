@@ -8,6 +8,7 @@
           </span>
           <ul>
             <li v-for="(subcategory, sid) in product" v-bind:key="sid">
+              
               <a
                 @click="openSubCategory(subcategory, pkey)"
                 class="d-none d-md-block"

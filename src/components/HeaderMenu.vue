@@ -17,10 +17,10 @@
         <span class="navbar-toggler-icon"></span>
       </button>
 
-      <b-navbar-brand to="/">
+      <b-navbar-brand href="/">
         <img
           src="@/assets/logo_transparent_blue_black.png"
-          alt="VENIQA"
+          alt="Luka mascotas"
           width="125px"
           style="padding: 0.5rem 0rem"
         />
@@ -91,6 +91,11 @@
               class="veniqa-nav d-none d-md-block"
               >Gatos</b-nav-item
             >
+            <b-nav-item
+              href="https://blog.lukamascotas.com.co/"
+              class="veniqa-nav d-none d-md-block"
+              >Blog</b-nav-item
+            >           
 
             <b-nav-item
               class="veniqa-nav d-none d-md-block"
@@ -255,7 +260,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 @import '../assets/css/global.scss';
 #header-menu {
   @media (max-width: 767.98px) {

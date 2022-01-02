@@ -5,6 +5,7 @@
       <ul class="category-list">
         <li @click="openCatalogPage('Perro')">Perros</li>
         <li @click="openCatalogPage('Gato')">Gatos</li>
+        <li onclick="location.href='https://blog.lukamascotas.com.co/';">Blog</li>
         <li @click="gotoOrders()">Ver pedidos</li>
       </ul>
 

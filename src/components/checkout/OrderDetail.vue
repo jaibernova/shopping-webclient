@@ -42,9 +42,11 @@
     <hr>
 
     <div class="total-line" v-if="orders && orders.length > 0">
+      <div class="d-block d-md-none d-none">
       <b-row>
-        <strong>Si estas desde tu celular, al presionar "Obtener el precio final" el boton de pago aparecera bajo la direccion de envio, es decir, arriba.</strong>
+        <strong>Al presionar "Obtener el precio final" el boton de pago aparecera bajo la direccion de envio, es decir, arriba.</strong>
       </b-row>
+      </div>
       <b-row>
         <p></p>
       </b-row>

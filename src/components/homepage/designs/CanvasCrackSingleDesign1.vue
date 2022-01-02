@@ -330,8 +330,8 @@ export default {
   background-color: #ad00000a;
   padding-top: 40px;
   padding-bottom: 70px;
-  margin-left: 15px;
-  margin-right: 15px;
+  margin-left: 0px;
+  margin-right: 0px;
 }
 
 .countdown-timer {
@@ -383,6 +383,6 @@ export default {
 }
 .container1 {
   margin-left: 15%;
-  margin-right: 8%;
+  margin-right: 15%;
 }
 </style>

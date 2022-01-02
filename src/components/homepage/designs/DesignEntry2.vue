@@ -31,7 +31,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style scoped lang="scss">
 #design-entry {
   font-family: 'Quicksand', sans-serif;
 }

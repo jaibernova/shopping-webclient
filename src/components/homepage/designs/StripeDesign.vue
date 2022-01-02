@@ -40,7 +40,7 @@
             </h5>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Ver producto</b-button>
+            <button class="addToCart" @click="shop(product)"><font-awesome-icon icon="shopping-bag" />&nbsp; Ver producto</button>
             <!-- </router-link> -->
           </b-col>
         </b-col>
@@ -69,7 +69,9 @@
             </p>
 
             <!-- <router-link :to="`/products/${product._id}`"> -->
-            <b-button class="addToCart" @click="shop(product)">Ver producto</b-button>
+            <b-button class="addToCart" @click="shop(product)">
+              <font-awesome-icon icon="shopping-bag"/>&nbsp;
+              Ver producto</b-button>
           </div>
         </div>
       </div>
@@ -91,11 +93,14 @@ export default {
     shop(product) {
       this.$emit('shop', product);
     },
+    openProductDetail(pid) {
+      this.$router.push(`/products/${pid}`);
+    },    
   },
 };
 </script>
 
-<style lang="scss" scoped>
+<style scoped lang="scss" >
 .box {
   height: 75vh;
   padding: 0px 0px 0px 0px !important;
@@ -127,15 +132,17 @@ h5 {
   // box-shadow: 3px 4px 5px 0px #ccc;
   // background-color: white;
   border-radius: 0px;
-  margin: 20px 20px 30px 0px;
-  width: 50%;
+  margin: 20px 20px 30px 30px;
+  width: 255px;
+  box-shadow: 0px 0 8px rgba(1, 41, 112, 0.08);
   // font-size: 13px;
 
  
 
   .img-parent {
-    height: 250px;
-    width: 220px;
+    margin-top: 20px;
+    height: 280px;
+    width: 255px;
     overflow: hidden;
   }
 
@@ -185,5 +192,8 @@ h5 {
   background-color: white;
 }
 
+.addToCart {
+  padding: 8px 12px;
+}
 
 </style>

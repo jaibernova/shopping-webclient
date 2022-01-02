@@ -219,17 +219,17 @@ export default {
     font-size: 1.2em;
   }
   .add-to-cart {
-    background-color: white; /*this for transparent button*/
-    border: 2px solid black; /* this is for button border*/
+    background-color: #603e85; /*this for transparent button*/
+    border: 2px solid #603e85; /* this is for button border*/
     border-radius: 0px;
-    color: black;
+    color: white;
     padding: 10px 40px;
   }
   .add-to-cart:hover {
-    background-color: black; /*this for transparent button*/
-    border: 2px solid black; /* this is for button border*/
+    background-color: white; /*this for transparent button*/
+    border: 2px solid #603e85;  /* this is for button border*/
     border-radius: 0px;
-    color: white;
+    color: #603e85; 
   }
   h3 {
     color: black;

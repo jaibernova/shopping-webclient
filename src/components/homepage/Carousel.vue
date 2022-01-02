@@ -1,6 +1,6 @@
 <template>
 <div>
-    <VueSlickCarousel :arrows="true" :autoplay="true" :autoplaySpeed="6000"  :dots="true">
+    <VueSlickCarousel :arrows="true" :autoplay="true" :autoplaySpeed="4000"  :dots="true">
       <div>
          <section id="hero">
            <div class="hero-container">
@@ -44,7 +44,7 @@
                           <h2 class="animate__animated animate__fadeInDown">Descarga nuestra aplicacion</h2>
                           <p class="animate__animated animate__fadeInUp">Ya disponible para dispositivos Android </p>
 
-                            <a href="https://play.google.com/store/apps/details?id=com.lukapetshop.myapp"   class="btn-get-started animate__animated animate__fadeInUp scrollto">Descargar</a>                            
+                            <a href="https://play.google.com/store/apps/details?id=com.lukapetshop.myapp"   class="btn-get-started animate__animated animate__fadeInUp">Descargar</a>                            
 
  
                         </div>

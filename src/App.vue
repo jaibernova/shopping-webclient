@@ -138,6 +138,7 @@ export default {
 
 #app {
   font-family: 'Quicksand','Raleway', sans-serif;
+  font-display: swap;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
@@ -160,9 +161,9 @@ body {
   zoom: 101%;
 }
 
-.container {
+/* .container {
   margin: 0px;
-}
+} */
 
 .toast-notification {
   /* margin-top: 100px !important; */
