@@ -58,7 +58,7 @@
           <div class="row">
             <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
               <a id="link" href="/#/search?category=Perro">
-                <div class="box">
+                <div class="box1">
                   <!-- <h3>Perritos</h3>
                   <br /> -->
                   <img
@@ -75,7 +75,7 @@
               data-aos-delay="400"
             >
               <a id="link" href="/#/search?category=Gato">
-                <div class="box">
+                <div class="box1">
                   <!-- <h3>Gaticos</h3>
                   <br /> -->
                   <img
@@ -97,7 +97,7 @@
                   <!-- <h3>Perritos</h3>
                   <br /> -->
                   <img
-                    src="@/assets/images/cachorro.webp"
+                    src="@/assets/images/cachorro1.webp"
                     class="img-fluid"
                     alt=""
                   />
@@ -110,7 +110,7 @@
                   <!-- <h3>Gaticos</h3>
                   <br /> -->
                   <img
-                    src="@/assets/images/gatito.webp"
+                    src="@/assets/images/gatito1.webp"
                     class="img-fluid"
                     alt=""
                   />
@@ -125,6 +125,7 @@
       </section>
       <!-- End Values Section -->
     </div>
+    <br />
     <br />
     <div class="section-title">
       <h2>Por tiempo limitado</h2>
@@ -578,6 +579,32 @@ export default {
   // padding: 30px 50px;
   transition: 0.5s;
   transform: scale(1.1);
+}
+
+.values .box1 {
+
+}
+.values .box1 img {
+  // padding: 30px 50px;
+  transition: 0.5s;
+  transform: scale(1.1);
+  padding: 5px;
+  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  text-align: center;
+  border-radius: 10%;
+
+  margin-right: 5%;
+  margin-left: 5%;
+  transition: 0.4s;
+  height: 105%;
+  background: #fbf9fc;
+}
+
+.values .box1:hover {
+
+}
+.values .box1:hover img {
+  transform: scale(1.05);
 }
 .values .box h3 {
   font-size: 24px;

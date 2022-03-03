@@ -249,7 +249,7 @@ export default {
       isUpdate: false,
       countryOptions: ['Colombia'],
       cityOptions: ['Bogota'],
-      localidadOptions: ['Suba', 'Usaquen', 'Engativa']
+      localidadOptions: ['Suba', 'Usaquen', 'Engativa', 'Chapinero', 'Santa Fe', 'San Cristobal', 'Usme', 'Tunjuelito', 'Bosa', 'Kennedy', 'Fontibon', 'Barrios Unidos', 'Teusaquillo', 'Los Martires', 'Antonio Nariño', 'Puente Aranda', 'Candelaria', 'Rafael Uribe', 'Ciudad Bolivar']
     };
   },
 

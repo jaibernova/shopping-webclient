@@ -743,5 +743,7 @@ export default {
 .container1 {
   margin-left: 26%;
   margin-right: 22%;
+  display: flex;
+flex-direction: row
 }
 </style>

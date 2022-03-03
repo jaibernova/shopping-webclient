@@ -1,5 +1,7 @@
 <template>
   <div>
+    <h5>Filtrar por:</h5>
+    <hr />
     <ul v-show="Object.keys(sidebar).length > 0">
       <li v-for="(product, pkey) in sidebar" v-bind:key="pkey">
         <div v-if="product && product.length > 0 && shouldProductDisplay(pkey, product)">
@@ -13,7 +15,7 @@
                 @click="openSubCategory(subcategory, pkey)"
                 class="d-none d-md-block"
                 :class="{'bold': activeSubCategory(subcategory.subcategory)}"
-              >{{subcategory.subcategory}}</a>
+              >{{subcategory.subcategory}} </a>
             </li>
           </ul>
           <br>
@@ -100,7 +102,7 @@ a {
   margin: 0px !important;
 }
 li {
-  margin-bottom: 5px;
+  margin-bottom: 10px;
   margin-top: 5px;
 }
 

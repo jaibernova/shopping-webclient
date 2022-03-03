@@ -9,8 +9,8 @@
                   <div class="carousel-inner" role="listbox">
 
                     <!-- Slide 1 -->
-                    <div class="carousel-item active" >
-                      <div class="carousel-container">
+                    <div  class="carousel-item active" >
+                      <div  class="carousel-container">
                         <div class="carousel-content container">
                           <h2 class="animate__animated animate__fadeInDown">Siguenos en instagram</h2>
                           <p class="animate__animated animate__fadeInUp">Para estar al tanto de todos nuestros nuevos productos</p>
@@ -18,10 +18,10 @@
                           <form     
                            action="https://www.instagram.com/luka.petshop2021/"     
                           >
-                            <button formtarget="_blank" class="btn-get-started animate__animated animate__fadeInUp scrollto">Instagram</button>
+                            <button formtarget="_blank" class="agregar">Instagram</button>
 
-                           </form>                          
-
+                           </form>  
+                        
                         </div>
                       </div>
                     </div>
@@ -43,8 +43,10 @@
                         <div class="carousel-content container">
                           <h2 class="animate__animated animate__fadeInDown">Descarga nuestra aplicacion</h2>
                           <p class="animate__animated animate__fadeInUp">Ya disponible para dispositivos Android </p>
+                          <br />
+                          <br />
 
-                            <a href="https://play.google.com/store/apps/details?id=com.lukapetshop.myapp"   class="btn-get-started animate__animated animate__fadeInUp">Descargar</a>                            
+                            <a href="https://play.google.com/store/apps/details?id=com.lukapetshop.myapp"   class="agregar">Descargar</a>                            
 
  
                         </div>
@@ -68,8 +70,9 @@
                         <div class="carousel-content container">
                           <h2 class="animate__animated animate__fadeInDown">Envio gratis por compras superiores a $150.000</h2>
                           <p class="animate__animated animate__fadeInUp">Agrega tus productos al carrito y selecciona el tiempo de entrega que prefieras</p>
-                                                 
-                            <a href="#/login?previousPath=%2F"   class="btn-get-started animate__animated animate__fadeInUp scrollto">Registrate</a>
+                            <br />  
+                            <br />          
+                            <a href="#/login?previousPath=%2F"   class="agregar">Registrate</a>
                         </div>
                       </div>
                     </div>
@@ -306,6 +309,26 @@
   #hero .carousel-control-prev, #hero .carousel-control-next {
     width: 5%;
   }
+}
+
+.agregar {
+  margin-top: 2em;
+  background-color: #603e85; /*this for transparent button*/
+  border: 1px #603e85; /* this is for button border*/
+  border-radius: 8px;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+  font-size: 15px;
+  color: white;
+
+}
+.agregar:hover {
+  background-color: white; /*this for transparent button*/
+  border-color: #603e85;
+  color: #603e85;
+
+    text-decoration: none;
+
 }
 
 

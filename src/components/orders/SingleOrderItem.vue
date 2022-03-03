@@ -52,7 +52,7 @@
             Porfavor contactanos al Whatsapp o al correo electronico Si tienes algun inconveniente con la compra.
             <br> <br>
 
-            <a href="mailto:soporte@lukapetshop.com.co">soporte@lukapetshop.com.co</a>
+            <a href="mailto:soporte@lukamascotas.com.co">soporte@lukamascotas.com.co</a>
           </div>
         </b-col>
       </b-row>

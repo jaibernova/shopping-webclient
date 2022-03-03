@@ -101,14 +101,14 @@ Después de realizar el retracto en página LUKA tendrá máximo cinco (5) días
     <br>
     <p>CONDICIONES DE REEMBOLSO DEL RETRACTO</p>
     <br>
-    <p>- Si el producto fue pagado con tarjeta de crédito y el método de reembolso elegido por el consumidor es reversión a su tarjeta de crédito, se reembolsará el dinero en la tarjeta utilizada dentro de los 15 a 25 días hábiles después que LUKA acepte el retracto. Estos tiempos de reversión dependen directamente de la entidad bancaria del consumidor. La reversión bancaria solo aplica para reembolsos sobre la totalidad de la orden. Para conocer en detalle nuestra política de reembolsos escribanos a soporte@lukapetshop.com.co
+    <p>- Si el producto fue pagado con tarjeta de crédito y el método de reembolso elegido por el consumidor es reversión a su tarjeta de crédito, se reembolsará el dinero en la tarjeta utilizada dentro de los 15 a 25 días hábiles después que LUKA acepte el retracto. Estos tiempos de reversión dependen directamente de la entidad bancaria del consumidor. La reversión bancaria solo aplica para reembolsos sobre la totalidad de la orden. Para conocer en detalle nuestra política de reembolsos escribanos a soporte@lukamascotas.com.co
 Solo cumpliendo estas condiciones el cliente recibirá la totalidad del dinero de su compra. En caso contrario el producto será retornado al cliente, asumiendo él el costo, y no habrá reembolso.</p>
     <br>
     <p>12. CONDICIONES DE RECLAMACIÓN POR PRODUCTO ERRADO</p>
     <br>
     <p>En caso de que el cliente reciba un producto de características diferentes a lo descrito en la página en el momento de la compra, se deberá llevar a cabo el siguiente procedimiento con el fin de verificar la validez de la reclamación.
 El cliente deberá realizar la solicitud de retracto por la página web dentro de los siguientes 5 días hábiles después de haber recibido el producto
-El cliente deberá enviar las imágenes del producto errado a soporte@lukapetshop.com.co indicando en el asunto del correo el motivo de la reclamación, dentro de las siguientes 48 horas hábiles de haber recibido el producto.
+El cliente deberá enviar las imágenes del producto errado a soporte@lukamascotas.com.co indicando en el asunto del correo el motivo de la reclamación, dentro de las siguientes 48 horas hábiles de haber recibido el producto.
 Una vez el área de Servicio al cliente reciba los documentos requeridos y sean corroborados los datos, en el término de 48 horas se procederá a programar la devolución por parte de LUKA.
 Una vez realizado el proceso de devolución se procederá a realizar el reordenamiento para que el cliente reciba el producto con las características adquiridas inicialmente.</p>
     <br>
@@ -268,7 +268,7 @@ El Titular de los Datos Personales tendrá el deber de mantener actualizada su i
   <p>7. RESPONSABLE Y CONTACTO</p>
   <br>
   <p>LUKA estará encargada de la recolección y el Tratamiento de Datos Personales, la Autorización y los registros almacenados, en todos los casos, impidiendo que se deterioren, pierdan, alteren o se usen sin autorización y conservarlos con la debida seguridad.
-El área de servicio al cliente estar a cargo de atender las peticiones, quejas y consultas de los titulares de los datos y los titulares de la información pueden ejercer sus derechos de conocer, actualizar, rectificar y suprimir sus Datos Personales, enviando comunicaciones al correo electrónico soporte@lukapetshop.com.co.</p>
+El área de servicio al cliente estar a cargo de atender las peticiones, quejas y consultas de los titulares de los datos y los titulares de la información pueden ejercer sus derechos de conocer, actualizar, rectificar y suprimir sus Datos Personales, enviando comunicaciones al correo electrónico soporte@lukamascotas.com.co.</p>
   <br>
   <p>8. ENTRADA EN VIGENCIA MODIFICACIÓN Y PERIODO DE VIGENCIA DE LAS BASES DE DATOS</p>
   <br>
