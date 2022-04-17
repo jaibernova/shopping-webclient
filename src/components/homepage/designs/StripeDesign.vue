@@ -7,7 +7,7 @@
       <b-row class="d-flex flex-row justify-content-center align-items-center">
         <b-col
           sm="6"
-          class="box d-flex flex-row justify-content-center align-items-center"
+          class="box1 d-flex flex-row justify-content-center align-items-center"
           v-for="(product, key) in products"
           v-bind:key="key"
         >
@@ -102,11 +102,32 @@ export default {
 
 <style scoped lang="scss" >
 .box {
-  height: 75vh;
+  background-color: white;
+  height: 50vh;
   padding: 0px 0px 0px 0px !important;
+  margin: 0px 0px 0px px !important;
+  
+}
+
+
+
+.box1 {
+  background-color: white;
+  
+  box-shadow: 0px 0 10px rgba(0, 0, 0, 0.08);
+  height: 58vh;
+  padding: 30px 10px 10px 10px !important;
   margin: 0px 0px 0px 0px !important;
+  
 
 }
+
+// .box1:hover {
+//   box-shadow: 100px 0 100px rgba(1, 41, 112, 0.08);
+//     border: 1px solid black;
+
+//   background: #fff;
+// }
 
 h4,
 h5 {
@@ -116,9 +137,10 @@ h5 {
 .picture1 {
   background-color: white;
 
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: center center;
 }
+
 
 .img-cls-featured {
   border-top-right-radius: 0.25rem;

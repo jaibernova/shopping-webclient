@@ -9,8 +9,7 @@
               <a>¿Tienen cobertura en toda Bogota?</a>
               <div>
                 <p>
-                  Por el momento se realizan envios a las localidades de Suba,
-                  Engativa y Usaquen.
+                  Si, realizamos envios a toda la ciudad.
                 </p>
               </div>
             </li>

@@ -1,6 +1,5 @@
 <template>
   <div id="header-menu">
-
     <b-navbar
       toggleable="md"
       id="topnavbar"
@@ -92,10 +91,15 @@
               >Gatos</b-nav-item
             >
             <b-nav-item
+              @click="openCategory('Humano')"
+              class="veniqa-nav d-none d-md-block"
+              >Humanos</b-nav-item
+            >
+            <b-nav-item
               href="https://blog.lukamascotas.com.co/"
               class="veniqa-nav d-none d-md-block"
               >Blog</b-nav-item
-            >           
+            >
 
             <b-nav-item
               class="veniqa-nav d-none d-md-block"
@@ -160,9 +164,7 @@
           <!-- End of Collapsible view display -->
         </b-collapse>
       </transition>
-
     </b-navbar>
-
   </div>
 </template>
 
@@ -382,6 +384,4 @@ export default {
     }
   }
 }
-
-
 </style>

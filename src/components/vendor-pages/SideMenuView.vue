@@ -1,6 +1,6 @@
 <template>
   <div>
-    <h5>Filtrar por:</h5>
+    <h6>Filtrar por:</h6>
     <hr />
     <ul v-show="Object.keys(sidebar).length > 0">
       <li v-for="(product, pkey) in sidebar" v-bind:key="pkey">

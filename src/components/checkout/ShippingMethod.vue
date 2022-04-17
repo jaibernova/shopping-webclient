@@ -37,16 +37,16 @@ export default {
     return {
       shippingMethods: [
         {
-          _id: 'Mañana',
-          name: 'Mañana',
+          _id: '1 a 3 dias',
+          name: '1 a 3 dias',
         },
         {
-          _id: '2 dias',
-          name: '2 dias',
+          _id: '4 a 6 dias',
+          name: '4 a 6 dias',
         },
         {
-          _id: '3 dias',
-          name: '3 dias',
+          _id: '7 a 9 dias',
+          name: '7 a 9 dias',
         },
         {
           _id: 'Otro, escribenos por Whatsapp',

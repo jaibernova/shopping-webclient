@@ -56,7 +56,7 @@
       <section id="values" class="values">
         <div class="container1 d-none d-lg-block">
           <div class="row">
-            <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
               <a id="link" href="/#/search?category=Perro">
                 <div class="box1">
                   <!-- <h3>Perritos</h3>
@@ -69,8 +69,21 @@
                 </div>
               </a>
             </div>
+            <div class="col-lg-4" data-aos="fade-up" data-aos-delay="200">
+              <a id="link" href="/#/search?category=Humano">
+                <div class="box1">
+                  <!-- <h3>Perritos</h3>
+                  <br /> -->
+                  <img
+                    src="@/assets/images/persona4.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
             <div
-              class="col-lg-6 mt-6 mt-lg-0"
+              class="col-lg-4 mt-6 mt-lg-0"
               data-aos="fade-up"
               data-aos-delay="400"
             >
@@ -97,7 +110,7 @@
                   <!-- <h3>Perritos</h3>
                   <br /> -->
                   <img
-                    src="@/assets/images/cachorro1.webp"
+                    src="@/assets/images/cachorro.webp"
                     class="img-fluid"
                     alt=""
                   />
@@ -110,7 +123,7 @@
                   <!-- <h3>Gaticos</h3>
                   <br /> -->
                   <img
-                    src="@/assets/images/gatito1.webp"
+                    src="@/assets/images/gatito.webp"
                     class="img-fluid"
                     alt=""
                   />
@@ -119,9 +132,30 @@
               </a>
             </div>
           </div>
-          <br />
-          <br />
+
         </div>
+
+        <div class="d-block d-md-none d-none">
+          <div class="row">
+
+            <div class="" data-aos="fade-up" data-aos-delay="200">
+              <a id="link" href="/#/search?category=Humano">
+                <div class="box2">
+                  <!-- <h3>Perritos</h3>
+                  <br /> -->
+                  <img
+                    src="@/assets/images/persona4.png"
+                    class="img-fluid"
+                    alt=""
+                  />
+                </div>
+              </a>
+            </div>
+          </div>
+     
+        </div>
+
+
       </section>
       <!-- End Values Section -->
     </div>
@@ -566,23 +600,52 @@ export default {
 --------------------------------------------------------------*/
 .values .box {
   padding: 5px;
-  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  box-shadow: 0px 0 0px rgba(1, 41, 112, 0.08);
   text-align: center;
   border-radius: 50%;
   margin: 10px;
   margin-right: 10%;
-  margin-left: 10%;
+  margin-left: 2%;
   transition: 0.3s;
   height: 100%;
 }
 .values .box img {
   // padding: 30px 50px;
   transition: 0.5s;
+  transform: scale(1);
+    padding: 5px;
+  box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
+  text-align: center;
+  border-radius: 50%;
+
+  margin-right: 5%;
+  margin-left: 5%;
+  transition: 0.4s;
+  height: 100%;
+  background: #fbf9fc;
+}
+
+.values .box2 {
+  padding: 3px;
+  box-shadow: 0px 0 15px rgba(1, 41, 112, 0.08);
+  text-align: center;
+  border-radius: 50%;
+  margin: 10px;
+  margin-right: 29%;
+  margin-left: 29%;
+  transition: 0.3s;
+  height: 100%;
+}
+.values .box2 img {
+  // padding: 30px 50px;
+  transition: 0.5s;
   transform: scale(1.1);
+  margin-top: 8%;
+  height: 80%;
+  
 }
 
 .values .box1 {
-
 }
 .values .box1 img {
   // padding: 30px 50px;
@@ -601,7 +664,6 @@ export default {
 }
 
 .values .box1:hover {
-
 }
 .values .box1:hover img {
   transform: scale(1.05);

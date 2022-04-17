@@ -1,12 +1,12 @@
 <template>
   <div class="">
     <section class="bg0 p-t-62 p-b-60">
-      <div class="container1 col-lg-6 d-none d-md-block">
+      <div class="container1 col-lg-8 d-none d-md-block">
         <div class="row">
-          <div class="col-md-12 col-lg-12 p-b-80">
-            <div class="p-r-45 p-r-0-lg">
+    
+            
               <!-- item blog -->
-              <div class="p-b-63">
+              <div class="col-lg-6 p-b-63">
                 <a
                   href="https://blog.lukamascotas.com.co/8-curiosidades-de-los-gatos-que-seguramente-no-conocias"
                   class="hov-img0 how-pos5-parent"
@@ -56,7 +56,7 @@
               </div>
               <hr />
               <!-- item blog -->
-              <div class="p-b-63">
+              <div class="col-lg-6 p-b-63">
                 <a
                   href="https://blog.lukamascotas.com.co/por-que-aullan-los-perros-estas-son-las-8-razones-principales"
                   class="hov-img0 how-pos5-parent"
@@ -106,9 +106,10 @@
                   </div>
                 </div>
               </div>
-              <hr />
+              
               <!-- item blog -->
               <div class="p-b-63">
+                <hr />
                 <a
                   href="https://blog.lukamascotas.com.co/la-ciencia-responde-quienes-son-las-mascotas-mas-inteligentes-los-perros-o-los-gatos"
                   class="hov-img0 how-pos5-parent"
@@ -159,8 +160,8 @@
                   </div>
                 </div>
               </div>
-            </div>
-          </div>
+     
+
         </div>
       </div>
       <!-- <div class="container d-block d-md-none d-none">
@@ -741,8 +742,8 @@ export default {
 }
 
 .container1 {
-  margin-left: 26%;
-  margin-right: 22%;
+  margin-left: 17%;
+  margin-right: 0%;
   display: flex;
 flex-direction: row
 }
