@@ -655,7 +655,7 @@ export default {
   box-shadow: 0px 0 5px rgba(1, 41, 112, 0.08);
   text-align: center;
   border-radius: 10%;
-
+  width: 90%;
   margin-right: 5%;
   margin-left: 5%;
   transition: 0.4s;
